@@ -1,8 +1,15 @@
 // UTILITY CLASSES
 
-.u-small-title {
+.u-mars-title {
     font-size: $mars;
     font-weight: bold;
+    text-transform: uppercase;
+}
+
+.u-venus-alt {
+    font-size: $venus;
+    font-weight: 700;
+    letter-spacing: $pluto;
 }
 
 .u-bold {

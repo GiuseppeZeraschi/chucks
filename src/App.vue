@@ -6,12 +6,12 @@
           <div class="v-navbar__hamburger-line"></div>
           <div class="v-navbar__hamburger-line"></div>
           <div class="v-navbar__hamburger-line u-margin-bottom-mercury"></div>
-          <span class="v-navbar__hamburger-text u-small-title">Menu</span>
+          <span class="v-navbar__hamburger-text u-mars-title">Menu</span>
         </div>
         <a href="/">
           <img class="v-navbar__logo" src="@/assets/logo.png" alt="Chuck's Logo">
         </a>
-        <div class="v-navbar__links">
+        <div class="v-navbar__links u-venus-alt">
           <router-link class="v-navbar__link" to="/">
             Home
             <div class="v-navbar__link--underline"></div>
@@ -72,14 +72,6 @@ export default {
 </script>
 
 <style lang="scss">
-.v-view {
-  padding: 0 $earth;
-
-  @include lg {
-    padding: 0 $uranus;
-  }
-}
-
 .v-navbar {
   background-color: $white;
   box-shadow: $box-shadow;
@@ -125,7 +117,7 @@ export default {
     }
 
     &-line {
-      background-color: $black;
+      background-color: $charcoal;
       height: $pluto;
       width: 100%;
     }
@@ -165,12 +157,17 @@ export default {
 
   &__link {
     align-items: center;
-    color: $black;
+    color: $charcoal;
     display: flex;
     height: $saturn;
     padding: $mars;
     position: relative;
     text-decoration: none;
+    transition: opacity 0.3 ease-in;
+
+    &:hover {
+      opacity: 0.6;
+    }
 
     &:hover .v-navbar__link--underline {
       display: initial;
@@ -199,7 +196,7 @@ export default {
   }
 
   &__social-link {
-    color: $black;
+    color: $charcoal;
     font-size: $venus;
     padding: $mercury;
     transition: opacity 0.3 ease-in;
