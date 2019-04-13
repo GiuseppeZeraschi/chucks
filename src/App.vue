@@ -148,7 +148,7 @@ export default {
 
   &__links {
     display: none;
-    width: 50%;
+    width: 60%;
 
     @include lg {
       display: flex;
