@@ -117,12 +117,13 @@ export default {
     }
 
     &-line {
-      background-color: $charcoal;
+      background-color: $gold;
       height: $pluto;
       width: 100%;
     }
 
     &-text {
+      color: $gold;
       line-height: 0;
     }
   }
@@ -196,7 +197,7 @@ export default {
   }
 
   &__social-link {
-    color: $charcoal;
+    color: $gold;
     font-size: $venus;
     padding: $mercury;
     transition: opacity 0.3 ease-in;
@@ -206,7 +207,7 @@ export default {
     }
 
     @include lg {
-      font-size: $earth;
+      font-size: $neptune;
     }
   }
 }
