@@ -7,6 +7,7 @@ module.exports = {
                     @import "@/styles/_text.scss";
                     @import "@/styles/_variables.scss";
                     @import "@/styles/_utilities.scss";
+                    @import "@/styles/_media-queries.scss";
                 `
             }
         }

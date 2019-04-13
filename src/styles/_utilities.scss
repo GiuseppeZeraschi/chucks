@@ -1,5 +1,10 @@
 // UTILITY CLASSES
 
+.u-small-title {
+    font-size: $mars;
+    font-weight: bold;
+}
+
 .u-bold {
     font-weight: 700;
 }
@@ -10,4 +15,8 @@
 
 .u-decoration-none {
     text-decoration: none;
+}
+
+.u-margin-bottom-mercury {
+    margin-bottom: $mercury;
 }

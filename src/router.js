@@ -14,12 +14,27 @@ export default new Router({
       component: Home
     },
     {
+      path: '/cocktails',
+      name: 'cocktails',
+      // route level code-splitting
+      // this generates a separate chunk (cocktails.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "cocktails" */ './views/Cocktails.vue')
+    },
+    {
+      path: '/location',
+      name: 'location',
+      component: () => import('./views/Location.vue')
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('./views/Contact.vue')
+    },
+    {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () => import('./views/About.vue')
     }
   ]
 })
