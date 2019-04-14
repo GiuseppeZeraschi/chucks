@@ -97,7 +97,7 @@ export default {
     }
 
     &-social-link {
-      color: $white;
+      color: $gold;
       font-size: $earth;
       padding: $mercury;
       transition: $transition-opacity;
