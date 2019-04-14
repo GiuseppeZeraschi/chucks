@@ -69,7 +69,7 @@ export default {
   }
 
   &__link {
-    color: $gold;
+    color: $white;
     padding: $venus;
     text-decoration: none;
     transition: $transition-opacity;
