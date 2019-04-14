@@ -57,6 +57,7 @@ export default {
 
   &__links {
     align-items: center;
+    border-bottom: $moon solid $gold;
     display: flex;
     flex-direction: column;
     justify-content: center;
