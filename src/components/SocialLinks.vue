@@ -41,7 +41,7 @@ export default {
     transition: $transition-opacity;
 
     &:hover {
-      opacity: 0.6;
+      opacity: $opacity;
     }
 
     @include lg {

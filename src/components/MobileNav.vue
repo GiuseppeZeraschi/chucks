@@ -9,7 +9,7 @@
       >
         <router-link
           :to="routerLink.link"
-          class="v-mobile-nav__link u-earth-title"
+          class="v-mobile-nav__link u-text-earth-title"
         >{{ routerLink.name }}</router-link>
       </span>
     </div>
@@ -57,7 +57,6 @@ export default {
 
   &__links {
     align-items: center;
-    border-bottom: $moon solid $gold;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,13 +75,14 @@ export default {
     transition: $transition-opacity;
 
     &:hover {
-      opacity: 0.6;
+      opacity: $opacity;
     }
   }
 
   &__footer {
     align-items: center;
     background-color: $black;
+    border-top: $border-gold;
     color: $white;
     display: flex;
     justify-content: center;
@@ -103,7 +103,7 @@ export default {
       transition: $transition-opacity;
 
       &:hover {
-        opacity: 0.6;
+        opacity: $opacity;
       }
     }
   }

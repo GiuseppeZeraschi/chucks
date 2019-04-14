@@ -21,5 +21,11 @@ $gold: #ab8f03;
 // BOX SHADOW
 $box-shadow: 0 $moon $mars 0 rgba(0, 0, 0, 0.4);
 
+// BORDER
+$border-gold: $moon solid $gold;
+
+// OPACITY
+$opacity: 0.6;
+
 // TRANSITIONS
 $transition-opacity: opacity 0.2s ease-in;

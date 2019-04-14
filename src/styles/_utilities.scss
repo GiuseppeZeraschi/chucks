@@ -1,17 +1,23 @@
 // UTILITY CLASSES
 
-.u-mars-title {
+.u-text-mars {
+    font-size: $mars;
+    letter-spacing: $moon;
+}
+
+.u-text-mars-title {
     font-size: $mars;
     font-weight: 700;
+    letter-spacing: $moon;
     text-transform: uppercase;
 }
 
-.u-venus-alt {
+.u-text-venus-alt {
     font-size: $venus;
     letter-spacing: $pluto;
 }
 
-.u-earth-title {
+.u-text-earth-title {
     font-size: $earth;
     letter-spacing: $pluto;
     text-transform: uppercase;

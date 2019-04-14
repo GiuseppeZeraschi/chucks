@@ -1,5 +1,5 @@
 <template>
-  <div class="v-navbar-links u-venus-alt">
+  <div class="v-navbar-links u-text-venus-alt">
     <router-link
       v-for="(routerLink, index) in routerLinks"
       :key="index"

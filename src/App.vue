@@ -18,7 +18,10 @@
         :router-links="routerLinks"
       ></mobile-nav>
     </transition>
-    <router-view v-if="!displayMobileNav" class="v-app-view"/>
+    <div v-if="!displayMobileNav">
+      <router-view class="v-router-view"/>
+      <main-footer :social-links="socialLinks"></main-footer>
+    </div>
   </div>
 </template>
 
@@ -28,6 +31,7 @@ import NavbarLinks from "@/components/NavbarLinks";
 import Hamburger from "@/components/Hamburger";
 import SocialLinks from "@/components/SocialLinks";
 import Logo from "@/components/Logo";
+import MainFooter from "@/components/MainFooter";
 
 export default {
   components: {
@@ -35,6 +39,7 @@ export default {
     MobileNav,
     Hamburger,
     SocialLinks,
+    MainFooter,
     Logo
   },
   data() {
@@ -98,6 +103,15 @@ export default {
 </script>
 
 <style lang="scss">
+#app {
+  min-height: 100vh;
+  position: relative;
+}
+
+.v-router-view {
+  padding-bottom: 61px;
+}
+
 .v-navbar {
   background-color: $white;
   box-shadow: $box-shadow;
@@ -110,7 +124,7 @@ export default {
   z-index: 100;
 
   &--scrolled {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.95);
     box-shadow: none;
   }
 

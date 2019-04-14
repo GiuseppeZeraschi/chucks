@@ -3,7 +3,7 @@
     <div class="v-hamburger__line"></div>
     <div class="v-hamburger__line"></div>
     <div class="v-hamburger__line u-margin-bottom-mercury"></div>
-    <span class="v-hamburger__text u-mars-title">Menu</span>
+    <span class="v-hamburger__text u-text-mars-title">Menu</span>
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
   width: $neptune;
 
   &:hover {
-    opacity: 0.6;
+    opacity: $opacity;
   }
 
   @include lg {
