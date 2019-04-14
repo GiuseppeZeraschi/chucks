@@ -1,5 +1,5 @@
 <template>
-  <div class="v-hamburger">
+  <div :class="{ 'v-hamburger--active': mobileNavActive }" class="v-hamburger">
     <div class="v-hamburger__line"></div>
     <div class="v-hamburger__line"></div>
     <div class="v-hamburger__line u-margin-bottom-mercury"></div>
@@ -9,7 +9,13 @@
 
 <script>
 export default {
-  name: "Hamburger"
+  name: "Hamburger",
+  props: {
+    mobileNavActive: {
+      type: Boolean,
+      required: true
+    }
+  }
 };
 </script>
 
@@ -26,6 +32,10 @@ export default {
   position: absolute;
   transition: $transition-opacity;
   width: $neptune;
+
+  &--active {
+    opacity: $opacity;
+  }
 
   &:hover {
     opacity: $opacity;

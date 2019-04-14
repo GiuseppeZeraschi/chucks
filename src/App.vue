@@ -3,7 +3,7 @@
     <nav class="v-navbar" :class="navClasses">
       <div class="v-navbar__wrapper">
         <span class="v-navbar__hamburger" @click.prevent="displayMobileNav = !displayMobileNav">
-          <hamburger></hamburger>
+          <hamburger :mobile-nav-active="displayMobileNav"></hamburger>
         </span>
         <logo></logo>
         <navbar-links :router-links="routerLinks"></navbar-links>
@@ -47,10 +47,6 @@ export default {
       isAtTheTop: true,
       displayMobileNav: false,
       routerLinks: [
-        {
-          name: "Home",
-          link: "/"
-        },
         {
           name: "Cocktails",
           link: "/cocktails"
@@ -110,6 +106,10 @@ export default {
 
 .v-router-view {
   padding-bottom: 61px;
+}
+
+.router-link-active {
+  color: $gold;
 }
 
 .v-navbar {

@@ -31,7 +31,7 @@ export default {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    width: $jupiter;
+    width: $saturn;
   }
 
   &__link {
@@ -42,10 +42,6 @@ export default {
 
     &:hover {
       opacity: $opacity;
-    }
-
-    @include lg {
-      font-size: $neptune;
     }
   }
 }
