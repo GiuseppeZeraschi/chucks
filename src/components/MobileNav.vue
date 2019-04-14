@@ -13,6 +13,18 @@
         >{{ routerLink.name }}</router-link>
       </span>
     </div>
+    <div class="v-mobile-nav__footer">
+      <div class="v-mobile-nav__footer-social-links">
+        <a
+          :href="socialLink.href"
+          target="_blank"
+          v-for="(socialLink, index) in socialLinks"
+          :key="index"
+        >
+          <i :class="socialLink.iconClass" class="fab v-mobile-nav__footer-social-link"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -21,6 +33,10 @@ export default {
   name: "MobileNav",
   props: {
     routerLinks: {
+      type: Array,
+      required: true
+    },
+    socialLinks: {
       type: Array,
       required: true
     }
@@ -32,16 +48,19 @@ export default {
 .v-mobile-nav {
   background-color: $charcoal;
   height: 100%;
-  overflow-x: none;
-  padding: $sun $neptune $neptune $neptune;
   width: 100%;
   z-index: 1000;
+
+  @include lg {
+    display: none;
+  }
 
   &__links {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: $sun $neptune $neptune $neptune;
   }
 
   &__link-wrapper {
@@ -53,6 +72,39 @@ export default {
     color: $gold;
     padding: $venus;
     text-decoration: none;
+    transition: $transition-opacity;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__footer {
+    align-items: center;
+    background-color: $black;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    padding: $earth;
+    width: 100%;
+
+    &-social-links {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      width: $jupiter;
+    }
+
+    &-social-link {
+      color: $white;
+      font-size: $earth;
+      padding: $mercury;
+      transition: $transition-opacity;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
   }
 }
 </style>

@@ -1,17 +1,25 @@
 <template>
   <div class="v-social-links">
-    <a href="https://www.instagram.com/chuckssydney/" target="_blank">
-      <i class="fab fa-instagram v-social-links__link"></i>
-    </a>
-    <a href="https://www.facebook.com/chuckssydney/" target="_blank">
-      <i class="fab fa-facebook v-social-links__link"></i>
+    <a
+      :href="socialLink.href"
+      target="_blank"
+      v-for="(socialLink, index) in socialLinks"
+      :key="index"
+    >
+      <i :class="socialLink.iconClass" class="fab v-social-links__link"></i>
     </a>
   </div>
 </template>
 
 <script>
 export default {
-  name: "SocialLinks"
+  name: "SocialLinks",
+  props: {
+    socialLinks: {
+      type: Array,
+      required: true
+    }
+  }
 };
 </script>
 
@@ -20,16 +28,17 @@ export default {
   display: none;
 
   @include lg {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    width: $saturn;
+    width: $jupiter;
   }
 
   &__link {
     color: $gold;
     font-size: $earth;
     padding: $mercury;
-    transition: opacity 0.3 ease-in;
+    transition: $transition-opacity;
 
     &:hover {
       opacity: 0.6;

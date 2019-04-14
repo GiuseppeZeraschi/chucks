@@ -42,10 +42,10 @@ export default {
     padding: $mars;
     position: relative;
     text-decoration: none;
-    transition: opacity 0.3 ease-in;
+    transition: color 0.2s ease-in;
 
     &:hover {
-      opacity: 0.6;
+      color: rgba(50, 46, 47, 0.6);
     }
 
     &:hover .v-navbar-links__link--underline {
@@ -60,6 +60,7 @@ export default {
       left: 0;
       position: absolute;
       width: 100%;
+      z-index: 1000;
     }
   }
 }

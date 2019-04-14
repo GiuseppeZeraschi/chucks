@@ -7,11 +7,16 @@
         </span>
         <logo></logo>
         <navbar-links :router-links="routerLinks"></navbar-links>
-        <social-links></social-links>
+        <social-links :social-links="socialLinks"></social-links>
       </div>
     </nav>
     <transition name="fade">
-      <mobile-nav v-if="displayMobileNav" @linkClicked="closeMobileNav" :router-links="routerLinks"></mobile-nav>
+      <mobile-nav
+        v-if="displayMobileNav"
+        @linkClicked="closeMobileNav"
+        :social-links="socialLinks"
+        :router-links="routerLinks"
+      ></mobile-nav>
     </transition>
     <router-view v-if="!displayMobileNav" class="v-app-view"/>
   </div>
@@ -57,6 +62,16 @@ export default {
           name: "About",
           link: "/about"
         }
+      ],
+      socialLinks: [
+        {
+          href: "https://www.instagram.com/chuckssydney/",
+          iconClass: "fa-instagram"
+        },
+        {
+          href: "https://www.facebook.com/chuckssydney/",
+          iconClass: "fa-facebook"
+        }
       ]
     };
   },
@@ -73,7 +88,7 @@ export default {
     }
   },
   created() {
-    window.addEventListener("scroll", () => {
+    this.scrollEvent = window.addEventListener("scroll", () => {
       window.scrollY === 0
         ? (this.isAtTheTop = true)
         : (this.isAtTheTop = false);
@@ -95,7 +110,7 @@ export default {
   z-index: 100;
 
   &--scrolled {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.85);
     box-shadow: none;
   }
 

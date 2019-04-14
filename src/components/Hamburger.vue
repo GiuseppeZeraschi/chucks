@@ -24,7 +24,12 @@ export default {
   left: $earth;
   padding: $mercury;
   position: absolute;
+  transition: $transition-opacity;
   width: $neptune;
+
+  &:hover {
+    opacity: 0.6;
+  }
 
   @include lg {
     display: none;
