@@ -2,57 +2,68 @@
   <div id="app">
     <nav class="v-navbar" :class="navClasses">
       <div class="v-navbar__wrapper">
-        <div class="v-navbar__hamburger">
-          <div class="v-navbar__hamburger-line"></div>
-          <div class="v-navbar__hamburger-line"></div>
-          <div class="v-navbar__hamburger-line u-margin-bottom-mercury"></div>
-          <span class="v-navbar__hamburger-text u-mars-title">Menu</span>
-        </div>
-        <a href="/">
-          <img class="v-navbar__logo" src="@/assets/logo.png" alt="Chuck's Logo">
-        </a>
-        <div class="v-navbar__links u-venus-alt">
-          <router-link class="v-navbar__link" to="/">
-            Home
-            <div class="v-navbar__link--underline"></div>
-          </router-link>
-          <router-link class="v-navbar__link" to="/cocktails">
-            Cocktails
-            <div class="v-navbar__link--underline"></div>
-          </router-link>
-          <router-link class="v-navbar__link" to="/location">
-            Location
-            <div class="v-navbar__link--underline"></div>
-          </router-link>
-          <router-link class="v-navbar__link" to="/contact">
-            Contact
-            <div class="v-navbar__link--underline"></div>
-          </router-link>
-          <router-link class="v-navbar__link" to="/about">
-            About
-            <div class="v-navbar__link--underline"></div>
-          </router-link>
-        </div>
-        <div class="v-navbar__social-links">
-          <a href="https://www.instagram.com/chuckssydney/" target="_blank">
-            <i class="fab fa-instagram v-navbar__social-link"></i>
-          </a>
-          <a href="https://www.facebook.com/chuckssydney/" target="_blank">
-            <i class="fab fa-facebook v-navbar__social-link"></i>
-          </a>
-        </div>
+        <span class="v-navbar__hamburger" @click.prevent="displayMobileNav = !displayMobileNav">
+          <hamburger></hamburger>
+        </span>
+        <logo></logo>
+        <navbar-links :router-links="routerLinks"></navbar-links>
+        <social-links></social-links>
       </div>
     </nav>
-    <router-view class="v-view"/>
+    <transition name="fade">
+      <mobile-nav v-if="displayMobileNav" @linkClicked="closeMobileNav" :router-links="routerLinks"></mobile-nav>
+    </transition>
+    <router-view v-if="!displayMobileNav" class="v-app-view"/>
   </div>
 </template>
 
 <script>
+import MobileNav from "@/components/MobileNav";
+import NavbarLinks from "@/components/NavbarLinks";
+import Hamburger from "@/components/Hamburger";
+import SocialLinks from "@/components/SocialLinks";
+import Logo from "@/components/Logo";
+
 export default {
+  components: {
+    NavbarLinks,
+    MobileNav,
+    Hamburger,
+    SocialLinks,
+    Logo
+  },
   data() {
     return {
-      isAtTheTop: true
+      isAtTheTop: true,
+      displayMobileNav: false,
+      routerLinks: [
+        {
+          name: "Home",
+          link: "/"
+        },
+        {
+          name: "Cocktails",
+          link: "/cocktails"
+        },
+        {
+          name: "Location",
+          link: "/location"
+        },
+        {
+          name: "Contact",
+          link: "/contact"
+        },
+        {
+          name: "About",
+          link: "/about"
+        }
+      ]
     };
+  },
+  methods: {
+    closeMobileNav() {
+      this.displayMobileNav = false;
+    }
   },
   computed: {
     navClasses() {
@@ -77,10 +88,11 @@ export default {
   box-shadow: $box-shadow;
   height: $saturn;
   position: fixed;
+  top: 0;
   transition: box-shadow 0.3s ease-in;
   transition: background-color 0.3s ease-in;
   width: 100vw;
-  z-index: 1000;
+  z-index: 100;
 
   &--scrolled {
     background-color: rgba(255, 255, 255, 0.6);
@@ -101,114 +113,7 @@ export default {
   }
 
   &__hamburger {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    height: $neptune;
-    justify-content: space-around;
-    left: $earth;
-    padding: $mercury;
-    position: absolute;
-    width: $neptune;
-
-    @include lg {
-      display: none;
-    }
-
-    &-line {
-      background-color: $gold;
-      height: $pluto;
-      width: 100%;
-    }
-
-    &-text {
-      color: $gold;
-      line-height: 0;
-    }
-  }
-
-  &__logo {
-    cursor: pointer;
-    height: $saturn;
-    right: 50%;
-    padding: $mars;
-    position: absolute;
-    top: 50%;
-    transform: translate(50%, -50%);
-    width: $saturn;
-
-    @include lg {
-      height: $sun;
-      left: -$earth;
-      top: 100%;
-      width: $sun;
-    }
-  }
-
-  &__links {
-    display: none;
-    width: 60%;
-
-    @include lg {
-      display: flex;
-      justify-content: space-around;
-    }
-  }
-
-  &__link {
-    align-items: center;
-    color: $charcoal;
-    display: flex;
-    height: $saturn;
-    padding: $mars;
-    position: relative;
-    text-decoration: none;
-    transition: opacity 0.3 ease-in;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:hover .v-navbar__link--underline {
-      display: initial;
-    }
-
-    &--underline {
-      background-color: $gold;
-      bottom: 0;
-      display: none;
-      height: $mercury;
-      left: 0;
-      position: absolute;
-      width: 100%;
-    }
-  }
-
-  &__social-links {
-    display: flex;
-    justify-content: space-between;
-    width: $uranus;
-
-    @include lg {
-      justify-content: space-around;
-      width: $sun;
-    }
-  }
-
-  &__social-link {
-    color: $gold;
-    font-size: $venus;
-    padding: $mercury;
-    transition: opacity 0.3 ease-in;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    @include lg {
-      font-size: $neptune;
-    }
+    display: contents;
   }
 }
 </style>

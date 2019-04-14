@@ -8,6 +8,7 @@ module.exports = {
                     @import "@/styles/_variables.scss";
                     @import "@/styles/_utilities.scss";
                     @import "@/styles/_media-queries.scss";
+                    @import "@/styles/_vue-transitions.scss";
                 `
             }
         }

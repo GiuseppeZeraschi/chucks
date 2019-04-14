@@ -2,12 +2,18 @@
 
 .u-mars-title {
     font-size: $mars;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
 .u-venus-alt {
     font-size: $venus;
+    font-weight: 700;
+    letter-spacing: $pluto;
+}
+
+.u-earth-title {
+    font-size: $earth;
     font-weight: 700;
     letter-spacing: $pluto;
 }
@@ -26,4 +32,8 @@
 
 .u-margin-bottom-mercury {
     margin-bottom: $mercury;
+}
+
+.u-margin-bottom-earth {
+    margin-bottom: $earth;
 }
