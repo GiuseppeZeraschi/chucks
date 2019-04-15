@@ -38,6 +38,7 @@
 
   &__owners-image {
     border-radius: $mercury;
+    box-shadow: $box-shadow;
   }
 
   &__divider-mobile {
