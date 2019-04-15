@@ -78,7 +78,7 @@ export default {
 
   &__footer {
     align-items: center;
-    background-color: $charcoal;
+    background-color: $black;
     border-top: $border-gold;
     color: $white;
     display: flex;
