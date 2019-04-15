@@ -46,7 +46,7 @@ export default {
 
 <style lang="scss">
 .v-mobile-nav {
-  background-color: $charcoal;
+  background-color: $white;
   height: 100%;
   // margin-bottom accounts for footer height
   margin-bottom: -$footer-height;
@@ -71,14 +71,14 @@ export default {
   }
 
   &__link {
-    color: $white;
+    color: $charcoal;
     padding: $venus;
     text-decoration: none;
   }
 
   &__footer {
     align-items: center;
-    background-color: $black;
+    background-color: $charcoal;
     border-top: $border-gold;
     color: $white;
     display: flex;
