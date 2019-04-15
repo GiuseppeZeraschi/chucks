@@ -1,5 +1,7 @@
 // UTILITY CLASSES
 
+// TEXT
+
 .u-text-mars {
     font-size: $mars;
     letter-spacing: $moon;
@@ -19,6 +21,7 @@
 
 .u-text-earth-title {
     font-size: $earth;
+    font-weight: 300;
     letter-spacing: $pluto;
     text-transform: uppercase;
 }
@@ -35,6 +38,8 @@
     text-decoration: none;
 }
 
+// MARGIN
+
 .u-margin-bottom-mercury {
     margin-bottom: $mercury;
 }
@@ -43,6 +48,6 @@
     margin-bottom: $earth;
 }
 
-.u-margin-bottom-earth {
+.u-margin-bottom-saturn {
     margin-bottom: $saturn;
 }

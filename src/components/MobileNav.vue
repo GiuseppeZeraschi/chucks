@@ -48,6 +48,8 @@ export default {
 .v-mobile-nav {
   background-color: $charcoal;
   height: 100%;
+  // margin-bottom accounts for footer height
+  margin-bottom: -$footer-height;
   width: 100%;
   z-index: 1000;
 
@@ -72,11 +74,6 @@ export default {
     color: $white;
     padding: $venus;
     text-decoration: none;
-    transition: $transition-opacity;
-
-    &:hover {
-      opacity: $opacity;
-    }
   }
 
   &__footer {

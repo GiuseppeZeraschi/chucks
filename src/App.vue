@@ -101,15 +101,21 @@ export default {
 <style lang="scss">
 #app {
   min-height: 100vh;
+  // padding-bottom accounts for footer height
+  padding-bottom: $footer-height;
   position: relative;
-}
-
-.v-router-view {
-  padding-bottom: 61px;
 }
 
 .router-link-active {
   color: $gold;
+}
+
+.v-section {
+  padding: $uranus $neptune;
+
+  @include lg {
+    padding: $jupiter $saturn;
+  }
 }
 
 .v-navbar {

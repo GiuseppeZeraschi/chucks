@@ -37,10 +37,6 @@ export default {
     opacity: $opacity;
   }
 
-  &:hover {
-    opacity: $opacity;
-  }
-
   @include lg {
     display: none;
   }
