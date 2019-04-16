@@ -18,10 +18,8 @@
         :router-links="routerLinks"
       ></mobile-nav>
     </transition>
-    <div v-if="!displayMobileNav">
-      <router-view class="v-router-view"/>
+      <router-view v-if="!displayMobileNav" class="v-router-view"/>
       <main-footer :social-links="socialLinks"></main-footer>
-    </div>
   </div>
 </template>
 
@@ -152,4 +150,3 @@ export default {
   }
 }
 </style>
-

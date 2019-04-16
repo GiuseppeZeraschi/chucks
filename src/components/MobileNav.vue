@@ -1,7 +1,8 @@
 <template>
   <div class="v-mobile-nav">
+    <div class="u-margin-bottom-saturn"></div>
     <div class="v-mobile-nav__links">
-      <span
+      <div
         @click.prevent="$emit('linkClicked')"
         v-for="(routerLink, index) in routerLinks"
         :key="index"
@@ -11,18 +12,6 @@
           :to="routerLink.link"
           class="v-mobile-nav__link u-text-earth-title"
         >{{ routerLink.name }}</router-link>
-      </span>
-    </div>
-    <div class="v-mobile-nav__footer">
-      <div class="v-mobile-nav__footer-social-links">
-        <a
-          :href="socialLink.href"
-          target="_blank"
-          v-for="(socialLink, index) in socialLinks"
-          :key="index"
-        >
-          <i :class="socialLink.iconClass" class="fab v-mobile-nav__footer-social-link"></i>
-        </a>
       </div>
     </div>
   </div>
@@ -62,7 +51,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: $sun $neptune $neptune $neptune;
+    padding: $uranus $neptune $saturn $neptune;
   }
 
   &__link-wrapper {
@@ -106,4 +95,3 @@ export default {
   }
 }
 </style>
-
