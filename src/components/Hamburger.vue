@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss">
-$hamburger-height: 35px;
+$hamburger-height: 32px;
 
 .v-hamburger {
   align-items: center;
@@ -52,7 +52,8 @@ $hamburger-height: 35px;
   &__text {
     color: $gold;
     position: absolute;
-    top: 30px;
+    top: 28px;
+    width: 28px;
   }
 }
 </style>
