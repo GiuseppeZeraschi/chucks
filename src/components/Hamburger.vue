@@ -2,8 +2,8 @@
   <div :class="{ 'v-hamburger--active': mobileNavActive }" class="v-hamburger">
     <div class="v-hamburger__line"></div>
     <div class="v-hamburger__line"></div>
-    <div class="v-hamburger__line u-margin-bottom-mercury"></div>
-    <span class="v-hamburger__text u-text-mars-title">Menu</span>
+    <div class="v-hamburger__line"></div>
+    <div class="v-hamburger__text u-text-mars-title">Menu</div>
   </div>
 </template>
 
@@ -20,18 +20,20 @@ export default {
 </script>
 
 <style lang="scss">
+$hamburger-height: 35px;
+
 .v-hamburger {
   align-items: center;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: $neptune;
+  height: $hamburger-height;
   justify-content: space-around;
   left: $earth;
   padding: $mercury;
   position: absolute;
   transition: $transition-opacity;
-  width: $neptune;
+  width: $uranus;
 
   &--active {
     opacity: $opacity;
@@ -49,8 +51,8 @@ export default {
 
   &__text {
     color: $gold;
-    line-height: 0;
+    position: absolute;
+    top: 30px;
   }
 }
 </style>
-
