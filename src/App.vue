@@ -17,8 +17,8 @@
         :social-links="socialLinks"
         :router-links="routerLinks"
       ></mobile-nav>
-    </transition>
       <router-view v-if="!displayMobileNav" class="v-router-view"/>
+    </transition>
       <main-footer :social-links="socialLinks"></main-footer>
   </div>
 </template>
@@ -125,7 +125,7 @@ export default {
   transition: box-shadow 0.3s ease-in;
   transition: background-color 0.3s ease-in;
   width: 100vw;
-  z-index: 100;
+  z-index: 1000;
 
   &--scrolled {
     background-color: rgba(255, 255, 255, 0.95);

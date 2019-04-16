@@ -1,6 +1,6 @@
 <template>
   <div class="v-footer">
-    <div class="v-footer__social-links u-margin-bottom-venus">
+    <!-- <div class="v-footer__social-links u-margin-bottom-venus">
       <a
         :href="socialLink.href"
         target="_blank"
@@ -9,7 +9,7 @@
       >
         <i :class="socialLink.iconClass" class="fab v-footer__social-link"></i>
       </a>
-    </div>
+    </div> -->
     <div class="v-footer__copyright u-text-mars">&copy; 2019 Chuck's. All rights reserved</div>
   </div>
 </template>

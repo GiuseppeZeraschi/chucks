@@ -36,11 +36,12 @@ export default {
 <style lang="scss">
 .v-mobile-nav {
   background-color: $white;
-  height: 100%;
+  height: 100vh;
   // margin-bottom accounts for footer height
   margin-bottom: -$footer-height;
+  position: absolute;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
 
   @include lg {
     display: none;
@@ -50,13 +51,13 @@ export default {
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    height: 100%;
+    justify-content: space-around;
     padding: $uranus $neptune $saturn $neptune;
   }
 
   &__link-wrapper {
     display: flex;
-    margin-bottom: $earth;
   }
 
   &__link {
