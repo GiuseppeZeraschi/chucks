@@ -42,18 +42,5 @@ export default {
   @include lg {
     padding: $earth $uranus;
   }
-
-  &__social-links {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    width: $jupiter;
-  }
-
-  &__social-link {
-    color: $gold;
-    font-size: $earth;
-    padding: $mercury;
-  }
 }
 </style>
