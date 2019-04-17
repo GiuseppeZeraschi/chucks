@@ -55,3 +55,17 @@
 .u-margin-bottom-saturn {
     margin-bottom: $saturn;
 }
+
+// FLEX
+
+.u-flex {
+    display: flex;
+}
+
+.u-flex-column {
+    flex-direction: column;
+}
+
+.u-flex-align-items-center {
+    align-items: center;
+}
