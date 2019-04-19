@@ -17,8 +17,8 @@
         :social-links="socialLinks"
         :router-links="routerLinks"
       ></mobile-nav>
-      <router-view v-if="!displayMobileNav" class="v-router-view"/>
     </transition>
+      <router-view v-if="!displayMobileNav" class="v-router-view"/>
       <main-footer :social-links="socialLinks"></main-footer>
   </div>
 </template>
