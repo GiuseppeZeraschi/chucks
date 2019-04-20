@@ -1,5 +1,11 @@
 <template>
-  <form class="v-contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <form
+    class="v-contact-form"
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
     <div class="v-contact-form__honey-pot">
       <label>
         Don’t fill this out if you're human:
@@ -217,6 +223,7 @@ export default {
 
   &__input {
     border: solid inset 0.5px $black;
+    font-family: "Heebo", sans-serif;
     transition: border 0.1s ease-in;
     width: 100%;
 
@@ -245,6 +252,7 @@ export default {
 
     @include lg {
       align-self: flex-start;
+      margin-left: $mercury;
     }
 
     &:hover {
