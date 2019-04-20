@@ -2,16 +2,9 @@
   <div class="v-about v-section">
     <div class="u-margin-bottom-saturn"></div>
     <div class="v-contact__box">
-      <div
-        v-for="(contactDetail, index) in contactDetails"
-        :key="index"
-      >
-        <a
-          class="v-contact__link"
-          target="_blank"
-          :href="contactDetail.href"
-        >
-          <i :class="contactDetail.iconClass" class="fas"></i>
+      <div v-for="(contactDetail, index) in contactDetails" :key="index">
+        <a class="v-contact__link" target="_blank" :href="contactDetail.href">
+          <i :class="contactDetail.iconClass" class="v-contact__link-icon"></i>
           <div class="v-contact__link-detail">{{ contactDetail.info }}</div>
         </a>
       </div>
@@ -25,34 +18,33 @@ export default {
     return {
       contactDetails: [
         {
-          info: '0491 570 156',
-          iconClass: 'fa-phone',
-          href: "tel:0491570156",
+          info: "0491 570 156",
+          iconClass: "fas fa-phone",
+          href: "tel:0491570156"
         },
         {
-          info: 'info@chuckssydney.com',
-          iconClass: 'fa-envelope',
-          href: "mailto:info@chuckssydney.com",
+          info: "info@chuckssydney.com",
+          iconClass: "fas fa-envelope",
+          href: "mailto:info@chuckssydney.com"
         },
         {
-          info: 'instagram.com/chuckssydney',
-          iconClass: 'fa-instagram',
-          href: "https://www.instagram.com/chuckssydney/",
+          info: "instagram.com/chuckssydney",
+          iconClass: "fab fa-instagram",
+          href: "https://www.instagram.com/chuckssydney/"
         },
         {
-          info: 'facebook.com/chuckssydney',
-          iconClass: 'fa-facebook',
-          href: "https://www.facebook.com/chuckssydney/",
+          info: "facebook.com/chuckssydney",
+          iconClass: "fab fa-facebook",
+          href: "https://www.facebook.com/chuckssydney/"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss">
 .v-contact {
-
   &__link {
     align-items: center;
     color: $black;
@@ -60,6 +52,16 @@ export default {
     margin-bottom: $venus;
     padding: $mercury;
     text-decoration: none;
+    transition: $transition-opacity;
+
+    &:hover {
+      opacity: $opacity;
+    }
+
+    &-icon {
+      color: $gold;
+      font-size: $earth;
+    }
 
     &-detail {
       margin-left: $venus;

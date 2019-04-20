@@ -6,7 +6,7 @@
       v-for="(socialLink, index) in socialLinks"
       :key="index"
     >
-      <i :class="socialLink.iconClass" class="fab v-social-links__link"></i>
+      <i :class="socialLink.iconClass" class="v-social-links__link"></i>
     </a>
   </div>
 </template>

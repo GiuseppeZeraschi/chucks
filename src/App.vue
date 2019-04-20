@@ -18,8 +18,8 @@
         :router-links="routerLinks"
       ></mobile-nav>
     </transition>
-      <router-view v-if="!displayMobileNav" class="v-router-view"/>
-      <main-footer :social-links="socialLinks"></main-footer>
+    <router-view v-if="!displayMobileNav" class="v-router-view"/>
+    <main-footer :social-links="socialLinks"></main-footer>
   </div>
 </template>
 
@@ -65,11 +65,11 @@ export default {
       socialLinks: [
         {
           href: "https://www.instagram.com/chuckssydney/",
-          iconClass: "fa-instagram"
+          iconClass: "fab fa-instagram"
         },
         {
           href: "https://www.facebook.com/chuckssydney/",
-          iconClass: "fa-facebook"
+          iconClass: "fab fa-facebook"
         }
       ]
     };
