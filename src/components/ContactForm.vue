@@ -94,7 +94,8 @@
         for="message"
       >Message</label>
     </div>
-    <input type="submit" value="Send" class="v-contact-form__submit">
+    <div data-netlify-recaptcha="true"></div>
+    <input type="submit" value="Send" class="v-contact-form__submit u-text-venus-title">
   </form>
 </template>
 
@@ -231,7 +232,6 @@ export default {
     border-radius: $pluto;
     color: $white;
     height: $neptune;
-    text-transform: uppercase;
     transition: $transition-opacity;
     width: 30%;
 
