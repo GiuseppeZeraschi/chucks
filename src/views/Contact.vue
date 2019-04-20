@@ -76,7 +76,7 @@ export default {
 
     @include lg {
       align-items: flex-start;
-      height: 250px;
+      height: 265px;
       margin-left: $saturn;
     }
   }

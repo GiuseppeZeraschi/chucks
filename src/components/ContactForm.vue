@@ -1,100 +1,115 @@
 <template>
-  <form class="v-contact-form" method="POST" data-netlify="true">
+  <form class="v-contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <div class="v-contact-form__honey-pot">
+      <label>
+        Don’t fill this out if you're human:
+        <input name="bot-field">
+      </label>
+    </div>
     <div class="v-contact-form__input-group">
       <div class="v-contact-form__input-wrapper">
-        <input
-          @click="firstNameInputActive = true"
-          @blur="firstNameInputActive = false"
-          v-model="firstName"
-          :class="firstNameInputClasses"
-          class="v-contact-form__input v-contact-form__input--text"
-          type="text"
-          name="firstName"
-          id="firstName"
-          required
-        >
         <label
           :class="firstNameLabelClasses"
           class="v-contact-form__label u-text-mars-title"
           for="firstName"
-        >First Name</label>
+        >
+          First Name
+          <input
+            @click="firstNameInputActive = true"
+            @blur="firstNameInputActive = false"
+            v-model="firstName"
+            :class="firstNameInputClasses"
+            class="v-contact-form__input v-contact-form__input--text"
+            type="text"
+            name="firstName"
+            id="firstName"
+            required
+          >
+        </label>
       </div>
       <div class="v-contact-form__input-wrapper">
-        <input
-          @click="lastNameInputActive = true"
-          @blur="lastNameInputActive = false"
-          v-model="lastName"
-          :class="lastNameInputClasses"
-          class="v-contact-form__input v-contact-form__input--text"
-          type="lastName"
-          name="lastName"
-          id="lastName"
-          required
-        >
         <label
           :class="lastNameLabelClasses"
           class="v-contact-form__label u-text-mars-title"
           for="lastName"
-        >Last Name</label>
+        >
+          Last Name
+          <input
+            @click="lastNameInputActive = true"
+            @blur="lastNameInputActive = false"
+            v-model="lastName"
+            :class="lastNameInputClasses"
+            class="v-contact-form__input v-contact-form__input--text"
+            type="lastName"
+            name="lastName"
+            id="lastName"
+            required
+          >
+        </label>
       </div>
     </div>
     <div class="v-contact-form__input-group">
       <div class="v-contact-form__input-wrapper">
-        <input
-          @click="phoneInputActive = true"
-          @blur="phoneInputActive = false"
-          v-model="phone"
-          :class="phoneInputClasses"
-          class="v-contact-form__input v-contact-form__input--text"
-          type="text"
-          name="phone"
-          id="phone"
-          required
-        >
         <label
           :class="phoneLabelClasses"
           class="v-contact-form__label u-text-mars-title"
           for="phone"
-        >Phone</label>
+        >
+          Phone
+          <input
+            @click="phoneInputActive = true"
+            @blur="phoneInputActive = false"
+            v-model="phone"
+            :class="phoneInputClasses"
+            class="v-contact-form__input v-contact-form__input--text"
+            type="text"
+            name="phone"
+            id="phone"
+            required
+          >
+        </label>
       </div>
       <div class="v-contact-form__input-wrapper">
-        <input
-          @click="emailInputActive = true"
-          @blur="emailInputActive = false"
-          v-model="email"
-          :class="emailInputClasses"
-          class="v-contact-form__input v-contact-form__input--text"
-          type="email"
-          name="email"
-          id="email"
-          required
-        >
         <label
           :class="emailLabelClasses"
           class="v-contact-form__label u-text-mars-title"
           for="email"
-        >Email</label>
+        >
+          Email
+          <input
+            @click="emailInputActive = true"
+            @blur="emailInputActive = false"
+            v-model="email"
+            :class="emailInputClasses"
+            class="v-contact-form__input v-contact-form__input--text"
+            type="email"
+            name="email"
+            id="email"
+            required
+          >
+        </label>
       </div>
     </div>
     <div class="v-contact-form__input-wrapper">
-      <textarea
-        @click="messageInputActive = true"
-        @blur="messageInputActive = false"
-        v-model="message"
-        :class="messageInputClasses"
-        class="v-contact-form__input v-contact-form__input--textarea"
-        style="resize: none;"
-        name="message"
-        id="message"
-        required
-      ></textarea>
       <label
         :class="messageLabelClasses"
         class="v-contact-form__label u-text-mars-title"
         for="message"
-      >Message</label>
+      >
+        Message
+        <textarea
+          @click="messageInputActive = true"
+          @blur="messageInputActive = false"
+          v-model="message"
+          :class="messageInputClasses"
+          class="v-contact-form__input v-contact-form__input--textarea"
+          style="resize: none;"
+          name="message"
+          id="message"
+          required
+        ></textarea>
+      </label>
     </div>
-    <div data-netlify-recaptcha="true"></div>
     <input type="submit" value="Send" class="v-contact-form__submit u-text-venus-title">
   </form>
 </template>
@@ -178,26 +193,25 @@ export default {
   display: flex;
   flex-direction: column;
 
+  &__honey-pot {
+    display: none;
+  }
+
   &__input-group {
     display: flex;
   }
 
   &__input-wrapper {
-    padding: $venus $mercury;
-    position: relative;
+    padding: $mercury;
     width: 100%;
   }
 
   &__label {
-    left: $mercury;
     margin-left: $mercury;
-    position: absolute;
-    top: $venus;
-    transition: all 0.1s ease-in;
+    transition: color 0.1s ease-in;
 
     &--active {
       color: $gold;
-      transform: translateY(-100%);
     }
   }
 
