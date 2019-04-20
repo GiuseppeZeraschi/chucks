@@ -40,7 +40,7 @@
             v-model="lastName"
             :class="lastNameInputClasses"
             class="v-contact-form__input v-contact-form__input--text"
-            type="lastName"
+            type="text"
             name="lastName"
             id="lastName"
             required
@@ -62,7 +62,7 @@
             v-model="phone"
             :class="phoneInputClasses"
             class="v-contact-form__input v-contact-form__input--text"
-            type="text"
+            type="tel"
             name="phone"
             id="phone"
             required
@@ -217,7 +217,6 @@ export default {
 
   &__input {
     border: solid inset 0.5px $black;
-    font-family: "Heebo", sans-serif;
     transition: border 0.1s ease-in;
     width: 100%;
 
