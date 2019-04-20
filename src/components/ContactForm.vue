@@ -221,13 +221,8 @@ export default {
     transition: border 0.1s ease-in;
     width: 100%;
 
-    &:focus {
-      outline: none;
-    }
-
     &--active {
       background-color: $grey;
-      border: solid $pluto $gold;
     }
 
     &--text {
