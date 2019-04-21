@@ -122,8 +122,7 @@ export default {
   height: $saturn;
   position: fixed;
   top: 0;
-  transition: box-shadow 0.3s ease-in;
-  transition: background-color 0.3s ease-in;
+  transition: all 0.3s ease-in;
   width: 100vw;
   z-index: 1000;
 

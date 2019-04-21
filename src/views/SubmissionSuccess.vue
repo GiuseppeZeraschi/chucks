@@ -5,7 +5,7 @@
       <modal
         message="Thanks for your enquiry! We will get back to you as soon as possible..."
         link="/"
-        button-text="Go back"
+        button-text="Home"
       ></modal>
     </div>
   </div>

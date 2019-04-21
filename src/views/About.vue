@@ -2,8 +2,18 @@
   <div class="v-about v-section">
     <div class="u-margin-bottom-saturn"></div>
     <div class="v-about__content">
-      <div class="v-about__image-wrapper">
-        <img class="v-about__owners-image" src="@/assets/owners.jpeg" alt="Chuck's owners">
+      <div v-show="imageLoaded" class="v-about__image-wrapper">
+        <transition name="fade">
+          <div v-show="!imageLoaded" class="v-about__image-tombstone"></div>
+        </transition>
+        <transition name="fade">
+          <img
+            @load="imageLoaded = true"
+            class="v-about__owners-image"
+            src="@/assets/owners.jpeg"
+            alt="Chuck's owners"
+          >
+        </transition>
       </div>
       <div class="v-about__owners-image-tombstone"></div>
       <div class="v-about__divider-mobile"></div>
@@ -14,6 +24,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      imageLoaded: false
+    };
+  }
+};
+</script>
 
 <style lang="scss">
 .v-about {
@@ -33,8 +53,16 @@
   }
 
   &__image-wrapper {
-    background-color: $grey;
     height: 400px;
+    position: relative;
+    width: 400px;
+  }
+
+  &__image-tombstone {
+    background-color: $grey;
+    border-radius: $mercury;
+    height: 400px;
+    position: absolute;
     width: 400px;
   }
 
@@ -42,7 +70,9 @@
     border-radius: $mercury;
     box-shadow: $box-shadow;
     height: 400px;
+    position: absolute;
     width: 400px;
+    z-index: 10;
   }
 
   &__divider-mobile {

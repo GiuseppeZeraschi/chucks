@@ -2,7 +2,7 @@
   <div class="v-modal">
     <div class="u-text-venus">{{ message }}</div>
     <router-link :to="link">
-      <button class="v-modal__button u-text-venus-title u-button-primary">{{ buttonText }}</button>
+      <button class="u-text-venus-title u-button-primary">{{ buttonText }}</button>
     </router-link>
   </div>
 </template>
@@ -41,9 +41,5 @@ export default {
   padding: $neptune;
   text-align: center;
   width: 350px;
-
-  &__button {
-    background-color: $gold;
-  }
 }
 </style>

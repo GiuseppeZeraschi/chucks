@@ -27,7 +27,7 @@
 
 .u-text-venus-title {
     font-size: $venus;
-    font-weight: 300;
+    font-weight: 700;
     letter-spacing: $moon;
     text-transform: uppercase;
 }
@@ -92,9 +92,10 @@
     color: $white;
     height: $neptune;
     padding: $mars;
-    transition: $transition-background-color;
-
+    transition: all 0.2s ease-in;
+    
     &:hover {
         background-color: $gold-light;
+        box-shadow: $moon $moon $pluto 0 rgba(0, 0, 0, 0.4);
     }
 }
