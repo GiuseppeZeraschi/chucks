@@ -87,10 +87,10 @@ export default {
       color: $gold;
       font-size: $earth;
       padding: $mercury;
-      transition: $transition-opacity;
+      transition: $transition-color;
 
       &:hover {
-        opacity: $opacity;
+        color: $gold-light;
       }
     }
   }

@@ -42,23 +42,24 @@ export default {
     padding: $mars;
     position: relative;
     text-decoration: none;
-    transition: color 0.2s ease-in;
+    transition: $transition-color;
 
     &:hover {
       color: rgba(50, 46, 47, 0.6);
     }
 
     &:hover .v-navbar-links__link--underline {
-      display: initial;
+      opacity: 1;
     }
 
     &--underline {
       background-color: $gold;
       bottom: 0;
-      display: none;
       height: $mercury;
       left: 0;
+      opacity: 0;
       position: absolute;
+      transition: $transition-opacity;
       width: 100%;
       z-index: 1000;
     }

@@ -1,9 +1,15 @@
 <template>
-  <div :class="{ 'v-hamburger--active': mobileNavActive }" class="v-hamburger">
-    <div class="v-hamburger__line"></div>
-    <div class="v-hamburger__line"></div>
-    <div class="v-hamburger__line"></div>
-    <div class="v-hamburger__text u-text-mars-title">Menu</div>
+  <div class="v-hamburger">
+    <div
+      v-for="index in 3"
+      :key="index"
+      :class="{ 'v-hamburger__line--active': mobileNavActive }"
+      class="v-hamburger__line"
+    ></div>
+    <div
+      :class="{ 'v-hamburger__text--active': mobileNavActive }"
+      class="v-hamburger__text u-text-mars-title"
+    >Menu</div>
   </div>
 </template>
 
@@ -32,12 +38,7 @@ $hamburger-height: 32px;
   left: $earth;
   padding: $mercury;
   position: absolute;
-  transition: $transition-opacity;
   width: $uranus;
-
-  &--active {
-    opacity: $opacity;
-  }
 
   @include lg {
     display: none;
@@ -46,14 +47,24 @@ $hamburger-height: 32px;
   &__line {
     background-color: $gold;
     height: $pluto;
+    transition: $transition-background-color;
     width: 100%;
+
+    &--active {
+      background-color: $gold-light;
+    }
   }
 
   &__text {
     color: $gold;
     position: absolute;
     top: 28px;
+    transition: $transition-color;
     width: 28px;
+
+    &--active {
+      color: $gold-light;
+    }
   }
 }
 </style>

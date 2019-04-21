@@ -4,7 +4,7 @@
     <div class="v-success">
       <modal
         message="Thanks for your enquiry! We will get back to you as soon as possible..."
-        link="/thanks"
+        link="/"
         button-text="Go back"
       ></modal>
     </div>

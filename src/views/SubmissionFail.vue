@@ -2,7 +2,7 @@
   <div class="v-section">
     <div class="u-margin-bottom-saturn"></div>
     <div class="v-fail">
-      <modal message="Oops, looks like something went wrong!.." link="/404" button-text="Go back"></modal>
+      <modal message="Oops, looks like something went wrong!.." link="/" button-text="Go back"></modal>
     </div>
   </div>
 </template>

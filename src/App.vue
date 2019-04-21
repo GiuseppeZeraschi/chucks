@@ -105,7 +105,7 @@ export default {
 }
 
 .router-link-active {
-  color: $gold;
+  color: $gold-light;
 }
 
 .v-section {

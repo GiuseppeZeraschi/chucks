@@ -3,15 +3,72 @@
     <div class="u-margin-bottom-saturn"></div>
     <div class="v-contact__content">
       <div class="v-contact__box u-text-venus-alt">
-        <div v-for="(contactDetail, index) in contactDetails" :key="index">
-          <a class="v-contact__link" target="_blank" :href="contactDetail.href">
-            <i :class="contactDetail.iconClass" class="v-contact__link-icon"></i>
-            <div class="v-contact__link-detail">{{ contactDetail.info }}</div>
-          </a>
-        </div>
+        <a
+          @mouseover="phone.isHovered = true"
+          @mouseleave="phone.isHovered = false"
+          class="v-contact__link"
+          target="_blank"
+          :href="phone.href"
+        >
+          <i
+            :class="[ phone.iconClass, { 'v-contact__link-icon--hovered': phone.isHovered }]"
+            class="v-contact__link-icon"
+          ></i>
+          <div
+            :class="{ 'v-contact__link-detail--hovered': phone.isHovered }"
+            class="v-contact__link-detail"
+          >{{ phone.info }}</div>
+        </a>
+        <a
+          @mouseover="email.isHovered = true"
+          @mouseleave="email.isHovered = false"
+          class="v-contact__link"
+          target="_blank"
+          :href="email.href"
+        >
+          <i
+            :class="[ email.iconClass, { 'v-contact__link-icon--hovered': email.isHovered }]"
+            class="v-contact__link-icon"
+          ></i>
+          <div
+            :class="{ 'v-contact__link-detail--hovered': email.isHovered }"
+            class="v-contact__link-detail"
+          >{{ email.info }}</div>
+        </a>
+        <a
+          @mouseover="instagram.isHovered = true"
+          @mouseleave="instagram.isHovered = false"
+          class="v-contact__link"
+          target="_blank"
+          :href="instagram.href"
+        >
+          <i
+            :class="[ instagram.iconClass, { 'v-contact__link-icon--hovered': instagram.isHovered }]"
+            class="v-contact__link-icon"
+          ></i>
+          <div
+            :class="{ 'v-contact__link-detail--hovered': instagram.isHovered }"
+            class="v-contact__link-detail"
+          >{{ instagram.info }}</div>
+        </a>
+        <a
+          @mouseover="facebook.isHovered = true"
+          @mouseleave="facebook.isHovered = false"
+          class="v-contact__link"
+          target="_blank"
+          :href="facebook.href"
+        >
+          <i
+            :class="[ facebook.iconClass, { 'v-contact__link-icon--hovered': facebook.isHovered }]"
+            class="v-contact__link-icon"
+          ></i>
+          <div
+            :class="{ 'v-contact__link-detail--hovered': facebook.isHovered }"
+            class="v-contact__link-detail"
+          >{{ facebook.info }}</div>
+        </a>
       </div>
       <div class="v-contact__divider-mobile"></div>
-
       <contact-form></contact-form>
     </div>
   </div>
@@ -24,28 +81,30 @@ export default {
   components: { ContactForm },
   data() {
     return {
-      contactDetails: [
-        {
-          info: "0491 570 156",
-          iconClass: "fas fa-phone",
-          href: "tel:0491570156"
-        },
-        {
-          info: "info@chuckssydney.com",
-          iconClass: "fas fa-envelope",
-          href: "mailto:info@chuckssydney.com"
-        },
-        {
-          info: "instagram.com/chuckssydney",
-          iconClass: "fab fa-instagram",
-          href: "https://www.instagram.com/chuckssydney/"
-        },
-        {
-          info: "facebook.com/chuckssydney",
-          iconClass: "fab fa-facebook",
-          href: "https://www.facebook.com/chuckssydney/"
-        }
-      ]
+      phone: {
+        info: "0491 570 156",
+        iconClass: "fas fa-phone",
+        href: "tel:0491570156",
+        isHovered: false
+      },
+      email: {
+        info: "info@chuckssydney.com",
+        iconClass: "fas fa-envelope",
+        href: "mailto:info@chuckssydney.com",
+        isHovered: false
+      },
+      instagram: {
+        info: "instagram.com/chuckssydney",
+        iconClass: "fab fa-instagram",
+        href: "https://www.instagram.com/chuckssydney/",
+        isHovered: false
+      },
+      facebook: {
+        info: "facebook.com/chuckssydney",
+        iconClass: "fab fa-facebook",
+        href: "https://www.facebook.com/chuckssydney/",
+        isHovered: false
+      }
     };
   }
 };
@@ -87,19 +146,28 @@ export default {
     display: inline-flex;
     padding: $mercury;
     text-decoration: none;
-    transition: $transition-opacity;
-
-    &:hover {
-      opacity: $opacity;
-    }
 
     &-icon {
       color: $gold;
       font-size: $earth;
+      transition: $transition-color;
+
+      &--hovered {
+        @include lg {
+          color: $gold-light;
+        }
+      }
     }
 
     &-detail {
       margin-left: $venus;
+      transition: $transition-opacity;
+
+      &--hovered {
+        @include lg {
+          opacity: $opacity;
+        }
+      }
     }
   }
 
