@@ -5,6 +5,7 @@
       <div class="v-about__image-wrapper">
         <img class="v-about__owners-image" src="@/assets/owners.jpeg" alt="Chuck's owners">
       </div>
+      <div class="v-about__owners-image-tombstone"></div>
       <div class="v-about__divider-mobile"></div>
       <div class="v-about__text-wrapper">
         <div>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor, tenetur maiores vero illum architecto aut magni repellat voluptatum numquam aspernatur culpa dolore beatae vitae eos facilis, distinctio consequuntur amet sequi est. Quo nisi quos harum quasi mollitia laudantium, reprehenderit quidem! Qui totam ipsum non ea ipsam, id vitae, praesentium accusantium quae, nisi veniam inventore consequuntur expedita reiciendis eligendi enim?"</div>
@@ -32,13 +33,16 @@
   }
 
   &__image-wrapper {
-    max-width: 400px;
-    max-height: 400px;
+    background-color: $grey;
+    height: 400px;
+    width: 400px;
   }
 
   &__owners-image {
     border-radius: $mercury;
     box-shadow: $box-shadow;
+    height: 400px;
+    width: 400px;
   }
 
   &__divider-mobile {
