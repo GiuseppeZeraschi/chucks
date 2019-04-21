@@ -160,8 +160,8 @@ export default {
           ...this.form
         })
       })
-        .then(() => (this.formSuccess = true))
-        .catch(() => (this.formSuccess = false));
+        .then(() => this.$router.push("thanks"))
+        .catch(() => this.$router.push("404"));
     }
   },
   computed: {

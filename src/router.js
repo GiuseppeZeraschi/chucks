@@ -35,6 +35,16 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: () => import('./views/About.vue')
+    },
+    {
+      path: '/thanks',
+      name: 'success',
+      component: () => import('./views/SubmissionSuccess.vue')
+    },
+    {
+      path: '/404',
+      name: 'fail',
+      component: () => import('./views/SubmissionFail.vue')
     }
   ]
 })
