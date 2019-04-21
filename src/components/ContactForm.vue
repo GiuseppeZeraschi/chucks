@@ -1,5 +1,6 @@
 <template>
   <form
+    @submit.prevent="handleSubmit"
     class="v-contact-form"
     name="contact"
     method="POST"
@@ -23,7 +24,7 @@
           <input
             @click="firstNameInputActive = true"
             @blur="firstNameInputActive = false"
-            v-model="firstName"
+            v-model="form.firstName"
             :class="firstNameInputClasses"
             class="v-contact-form__input v-contact-form__input--text"
             type="text"
@@ -43,7 +44,7 @@
           <input
             @click="lastNameInputActive = true"
             @blur="lastNameInputActive = false"
-            v-model="lastName"
+            v-model="form.lastName"
             :class="lastNameInputClasses"
             class="v-contact-form__input v-contact-form__input--text"
             type="text"
@@ -65,7 +66,7 @@
           <input
             @click="phoneInputActive = true"
             @blur="phoneInputActive = false"
-            v-model="phone"
+            v-model="form.phone"
             :class="phoneInputClasses"
             class="v-contact-form__input v-contact-form__input--text"
             type="tel"
@@ -85,7 +86,7 @@
           <input
             @click="emailInputActive = true"
             @blur="emailInputActive = false"
-            v-model="email"
+            v-model="form.email"
             :class="emailInputClasses"
             class="v-contact-form__input v-contact-form__input--text"
             type="email"
@@ -106,7 +107,7 @@
         <textarea
           @click="messageInputActive = true"
           @blur="messageInputActive = false"
-          v-model="message"
+          v-model="form.message"
           :class="messageInputClasses"
           class="v-contact-form__input v-contact-form__input--textarea"
           style="resize: none;"
@@ -125,17 +126,43 @@ export default {
   name: "ContactForm",
   data() {
     return {
+      formSuccess: null,
       firstNameInputActive: false,
       lastNameInputActive: false,
       phoneInputActive: false,
       emailInputActive: false,
       messageInputActive: false,
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: "",
-      message: ""
+      form: {
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        message: ""
+      }
     };
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    handleSubmit() {
+      fetch("/", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/x-www-urlencoded"
+        },
+        body: this.encode({
+          "form-name": "contact",
+          ...this.form
+        })
+      })
+        .then(() => (this.formSuccess = true))
+        .catch(() => (this.formSuccess = false));
+    }
   },
   computed: {
     firstNameInputClasses() {
@@ -146,7 +173,7 @@ export default {
     firstNameLabelClasses() {
       return {
         "v-contact-form__label--active":
-          this.firstNameInputActive || this.firstName
+          this.firstNameInputActive || this.form.firstName
       };
     },
     lastNameInputClasses() {
@@ -157,7 +184,7 @@ export default {
     lastNameLabelClasses() {
       return {
         "v-contact-form__label--active":
-          this.lastNameInputActive || this.lastName
+          this.lastNameInputActive || this.form.lastName
       };
     },
     phoneInputClasses() {
@@ -167,7 +194,8 @@ export default {
     },
     phoneLabelClasses() {
       return {
-        "v-contact-form__label--active": this.phoneInputActive || this.phone
+        "v-contact-form__label--active":
+          this.phoneInputActive || this.form.phone
       };
     },
     emailInputClasses() {
@@ -177,7 +205,8 @@ export default {
     },
     emailLabelClasses() {
       return {
-        "v-contact-form__label--active": this.emailInputActive || this.email
+        "v-contact-form__label--active":
+          this.emailInputActive || this.form.email
       };
     },
     messageInputClasses() {
@@ -187,7 +216,8 @@ export default {
     },
     messageLabelClasses() {
       return {
-        "v-contact-form__label--active": this.messageInputActive || this.message
+        "v-contact-form__label--active":
+          this.messageInputActive || this.form.message
       };
     }
   }
