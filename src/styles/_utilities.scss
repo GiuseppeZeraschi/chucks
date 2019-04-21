@@ -14,6 +14,12 @@
     text-transform: uppercase;
 }
 
+.u-text-venus {
+    font-size: $venus;
+    font-weight: 300;
+    letter-spacing: $pluto;
+}
+
 .u-text-venus-alt {
     font-size: $venus;
     letter-spacing: $pluto;
@@ -75,4 +81,20 @@
 
 .u-flex-align-items-center {
     align-items: center;
+}
+
+// BUTTONS
+
+.u-button-primary {
+    background-color: $gold;
+    border: none;
+    border-radius: $pluto;
+    color: $white;
+    height: $neptune;
+    padding: $mars;
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+        background-color: $gold-light; 
+    }
 }

@@ -117,7 +117,11 @@
         ></textarea>
       </label>
     </div>
-    <input type="submit" value="Send" class="v-contact-form__submit u-text-venus-title">
+    <input
+      type="submit"
+      value="Send"
+      class="v-contact-form__submit u-button-primary u-text-venus-title"
+    >
   </form>
 </template>
 
@@ -272,21 +276,10 @@ export default {
 
   &__submit {
     align-self: center;
-    background-color: $gold;
-    border: none;
-    border-radius: $pluto;
-    color: $white;
-    height: $neptune;
-    transition: $transition-opacity;
-    width: 30%;
 
     @include lg {
       align-self: flex-start;
       margin-left: $mercury;
-    }
-
-    &:hover {
-      opacity: $opacity;
     }
   }
 }

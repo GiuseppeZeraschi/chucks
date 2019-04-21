@@ -1,14 +1,26 @@
 <template>
-  <div>
-    <h1>Oops, looks like something went wrong!</h1>
-    <router-link to="/contact">
-      <button>Back to form</button>
-    </router-link>
+  <div class="v-section">
+    <div class="u-margin-bottom-saturn"></div>
+    <div class="v-fail">
+      <modal message="Oops, looks like something went wrong!.." link="/404" button-text="Go back"></modal>
+    </div>
   </div>
 </template>
 
 <script>
+import Modal from "@/components/Modal";
+
 export default {
-  name: "SubmissionFail"
+  name: "SubmissionFail",
+  components: { Modal }
 };
 </script>
+
+<style>
+.v-fail {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+</style>
+
