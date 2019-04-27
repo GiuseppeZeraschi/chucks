@@ -92,10 +92,10 @@
     color: $white;
     height: $neptune;
     padding: $mars;
-    transition: all 0.2s ease-in;
+    transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
     
     &:hover {
         background-color: $gold-light;
-        box-shadow: $moon $moon $pluto 0 rgba(0, 0, 0, 0.4);
+        box-shadow: 0 $moon $pluto 0 rgba(0, 0, 0, 0.4);
     }
 }

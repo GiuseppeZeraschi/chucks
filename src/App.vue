@@ -109,7 +109,7 @@ export default {
 }
 
 .v-section {
-  padding: $uranus $neptune;
+  padding: $saturn $neptune;
 
   @include lg {
     padding: $jupiter $saturn;
@@ -122,7 +122,7 @@ export default {
   height: $saturn;
   position: fixed;
   top: 0;
-  transition: all 0.3s ease-in;
+  transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in;
   width: 100vw;
   z-index: 1000;
 
