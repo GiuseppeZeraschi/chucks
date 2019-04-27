@@ -99,6 +99,7 @@ export default {
 <style lang="scss">
 #app {
   min-height: 100vh;
+  overflow: hidden;
   // padding-bottom accounts for footer height
   padding-bottom: $footer-height;
   position: relative;

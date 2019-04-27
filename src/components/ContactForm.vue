@@ -276,10 +276,12 @@ export default {
 
   &__submit {
     align-self: center;
+    margin-top: $earth;
 
     @include lg {
       align-self: flex-start;
       margin-left: $mercury;
+      margin-top: $mercury;
     }
   }
 }

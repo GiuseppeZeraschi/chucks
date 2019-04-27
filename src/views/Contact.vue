@@ -82,15 +82,15 @@ export default {
   data() {
     return {
       phone: {
-        info: "0491 570 156",
+        info: "0434 278 994",
         iconClass: "fas fa-phone",
         href: "tel:0491570156",
         isHovered: false
       },
       email: {
-        info: "info@chuckssydney.com",
+        info: "management@chuckscocktailbar.com",
         iconClass: "fas fa-envelope",
-        href: "mailto:info@chuckssydney.com",
+        href: "mailto:management@chuckscocktailbar.com",
         isHovered: false
       },
       instagram: {
