@@ -42,6 +42,7 @@ export default {
   },
   data() {
     return {
+      isDesktop: null,
       isAtTheTop: true,
       displayMobileNav: false,
       routerLinks: [
@@ -77,6 +78,16 @@ export default {
   methods: {
     closeMobileNav() {
       this.displayMobileNav = false;
+    },
+    scrollY() {
+      window.scrollY === 0
+        ? (this.isAtTheTop = true)
+        : (this.isAtTheTop = false);
+    },
+    viewportWidth() {
+      window.innerWidth > 992
+        ? (this.isDesktop = true)
+        : (this.isDesktop = false);
     }
   },
   computed: {
@@ -87,11 +98,15 @@ export default {
     }
   },
   created() {
-    this.scrollEvent = window.addEventListener("scroll", () => {
-      window.scrollY === 0
-        ? (this.isAtTheTop = true)
-        : (this.isAtTheTop = false);
-    });
+    window.innerWidth > 992
+      ? (this.isDesktop = true)
+      : (this.isDesktop = false);
+    window.addEventListener("scroll", this.scrollY);
+    window.addEventListener("resize", this.viewportWidth);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.scrollY);
+    window.removeEventListener("resize", this.viewportWidth);
   }
 };
 </script>
