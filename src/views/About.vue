@@ -17,3 +17,11 @@ export default {
   components: { ImageTextLayout }
 };
 </script>
+
+<style lang="scss">
+.v-about {
+  &__owners-image {
+    box-shadow: $box-shadow;
+  }
+}
+</style>

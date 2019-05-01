@@ -1,8 +1,6 @@
 <template>
   <div class="v-image-text-layout__content">
-    <div class="v-image-text-layout__image-wrapper">
-      <slot/>
-    </div>
+    <slot/>
     <div class="v-image-text-layout__divider-mobile"></div>
     <div class="v-image-text-layout__text-wrapper">
       <slot name="text"/>
@@ -32,12 +30,6 @@ export default {
       flex-direction: row;
       justify-content: center;
     }
-  }
-
-  &__image-wrapper {
-    box-shadow: $box-shadow;
-    max-width: 400px;
-    max-height: 400px;
   }
 
   &__divider-mobile {
@@ -73,4 +65,3 @@ export default {
   }
 }
 </style>
-
