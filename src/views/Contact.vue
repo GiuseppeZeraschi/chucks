@@ -84,7 +84,7 @@ export default {
       phone: {
         info: "0434 278 994",
         iconClass: "fas fa-phone",
-        href: "tel:0491570156",
+        href: "tel:0434278994",
         isHovered: false
       },
       email: {
