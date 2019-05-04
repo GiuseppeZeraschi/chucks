@@ -99,7 +99,7 @@ export default {
   },
   watch: {
     isDesktop() {
-      this.$store.commit("setScreensize", this.isDesktop);
+      this.$store.dispatch("setScreensize", this.isDesktop);
     }
   },
   created() {

@@ -13,6 +13,8 @@ export default new Vuex.Store({
     }
   },
   actions: {
-
+    setScreensize({ commit }, payload) {
+      commit('setScreensize', payload);
+    }
   }
 })
