@@ -97,6 +97,11 @@ export default {
       };
     }
   },
+  watch: {
+    isDesktop() {
+      this.$store.commit("setScreensize", this.isDesktop);
+    }
+  },
   created() {
     window.innerWidth > 992
       ? (this.isDesktop = true)
