@@ -100,6 +100,7 @@ export default {
   watch: {
     isDesktop() {
       this.$store.dispatch("setScreensize", this.isDesktop);
+      if (this.isDesktop) this.displayMobileNav = false;
     }
   },
   created() {
