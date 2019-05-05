@@ -17,7 +17,7 @@
           <div
             :class="{ 'v-contact__link-detail--hovered': phone.isHovered }"
             class="v-contact__link-detail"
-          >{{ phone.info }}</div>
+          >{{ isDesktop ? phone.info : phone.shorthand }}</div>
         </a>
         <a
           @mouseover="email.isHovered = true"
@@ -33,7 +33,7 @@
           <div
             :class="{ 'v-contact__link-detail--hovered': email.isHovered }"
             class="v-contact__link-detail"
-          >{{ email.info }}</div>
+          >{{ isDesktop ? email.info : email.shorthand }}</div>
         </a>
         <a
           @mouseover="instagram.isHovered = true"
@@ -49,7 +49,7 @@
           <div
             :class="{ 'v-contact__link-detail--hovered': instagram.isHovered }"
             class="v-contact__link-detail"
-          >{{ instagram.info }}</div>
+          >{{ isDesktop ? instagram.info : instagram.shorthand }}</div>
         </a>
         <a
           @mouseover="facebook.isHovered = true"
@@ -65,7 +65,7 @@
           <div
             :class="{ 'v-contact__link-detail--hovered': facebook.isHovered }"
             class="v-contact__link-detail"
-          >{{ facebook.info }}</div>
+          >{{ isDesktop ? facebook.info : facebook.shorthand }}</div>
         </a>
       </div>
       <div class="v-contact__divider-mobile"></div>
@@ -76,6 +76,7 @@
 
 <script>
 import ContactForm from "@/components/ContactForm";
+import { mapState } from "vuex";
 
 export default {
   components: { ContactForm },
@@ -83,29 +84,38 @@ export default {
     return {
       phone: {
         info: "0434 278 994",
+        shorthand: "Phone",
         iconClass: "fas fa-phone",
         href: "tel:0434278994",
         isHovered: false
       },
       email: {
         info: "management@chuckscocktailbar.com",
+        shorthand: "Email",
         iconClass: "fas fa-envelope",
         href: "mailto:management@chuckscocktailbar.com",
         isHovered: false
       },
       instagram: {
         info: "instagram.com/chuckssydney",
+        shorthand: "Instagram",
         iconClass: "fab fa-instagram",
         href: "https://www.instagram.com/chuckssydney/",
         isHovered: false
       },
       facebook: {
         info: "facebook.com/chuckssydney",
+        shorthand: "Facebook",
         iconClass: "fab fa-facebook",
         href: "https://www.facebook.com/chuckssydney/",
         isHovered: false
       }
     };
+  },
+  computed: {
+    ...mapState({
+      isDesktop: state => state.isDesktop
+    })
   }
 };
 </script>
