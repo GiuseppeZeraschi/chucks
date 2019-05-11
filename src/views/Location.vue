@@ -12,7 +12,7 @@
         allowfullscreen
       ></iframe>
       <template slot="text">
-        <div>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor, tenetur maiores vero illum architecto aut magni repellat voluptatum numquam aspernatur culpa dolore beatae vitae eos facilis, distinctio consequuntur amet sequi est. Quo nisi quos harum quasi mollitia laudantium, reprehenderit quidem! Qui totam ipsum non ea ipsam, id vitae, praesentium accusantium quae, nisi veniam inventore consequuntur expedita reiciendis eligendi enim?"</div>
+        <div>"We’re the perfect place for those who are running early and just aren’t quite ready to call lunch or dinner quits yet. Just a generally great place to hang out and unwind."</div>
       </template>
     </image-text-layout>
   </div>
