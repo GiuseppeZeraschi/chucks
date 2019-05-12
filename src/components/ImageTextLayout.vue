@@ -54,7 +54,7 @@ export default {
     background-color: $gold;
     height: $mercury;
     margin: $uranus 0;
-    width: 30%;
+    width: 15%;
 
     @include lg {
       display: none;
@@ -79,7 +79,7 @@ export default {
       background-color: $gold;
       height: $mercury;
       margin-top: $earth;
-      width: 30%;
+      width: 25%;
     }
   }
 }

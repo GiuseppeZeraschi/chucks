@@ -14,6 +14,13 @@
     text-transform: uppercase;
 }
 
+.u-text-mars-title-alt {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: $pluto;
+    text-transform: uppercase;
+}
+
 .u-text-venus {
     font-size: $venus;
     font-weight: 300;
@@ -33,6 +40,13 @@
 
 .u-text-earth-title {
     font-size: $earth;
+    font-weight: 300;
+    letter-spacing: $mercury;
+    text-transform: uppercase;
+}
+
+.u-text-neptune-title {
+    font-size: $neptune;
     font-weight: 300;
     letter-spacing: $mercury;
     text-transform: uppercase;
@@ -64,8 +78,20 @@
     margin-bottom: $earth;
 }
 
+.u-margin-bottom-neptune {
+    margin-bottom: $neptune;
+}
+
+.u-margin-bottom-uranus {
+    margin-bottom: $uranus;
+}
+
 .u-margin-bottom-saturn {
     margin-bottom: $saturn;
+}
+
+.u-margin-left-venus {
+    margin-left: $venus;
 }
 
 // FLEX
@@ -87,14 +113,31 @@
 .u-button-primary {
     background-color: $gold;
     border: none;
-    border-radius: $pluto;
+    border-radius: $mercury;
+    box-shadow: 0 $moon $pluto 0 rgba(0, 0, 0, 0.4);
     color: $white;
     height: $neptune;
-    padding: $mars;
+    padding: $mars $earth;
     transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
 
     &:hover {
         background-color: $gold-light;
-        box-shadow: 0 $moon $pluto 0 rgba(0, 0, 0, 0.4);
+        box-shadow: none;
+    }
+}
+
+.u-button-secondary {
+    background-color: $black;
+    border: none;
+    border-radius: $mercury;
+    box-shadow: 0 $moon $pluto 0 rgba(0, 0, 0, 0.4);
+    color: $white;
+    height: $neptune;
+    padding: $mars $earth;
+    transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
+
+    &:hover {
+        background-color: $charcoal;
+        box-shadow: none;
     }
 }

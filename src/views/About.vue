@@ -4,7 +4,7 @@
     <image-text-layout>
       <img class="v-about__owners-image" src="@/assets/owners.jpeg" alt="Chuck's owners">
       <template slot="text">
-        <div>"Your friendly, neighbourhood cocktail bar. Serving up some old forgotten classics, great cognac cocktails and kickass signatures. Chuck's is an intimate, funky space where the relaxed mood and friendly service will take you out of your busy week. Playing some fine old tunes from blues, jazz, funk, and motown to hip hop and rap, we are a space for everyone."</div>
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis obcaecati reiciendis doloremque dicta laborum facilis tempora, aspernatur libero minima laudantium aut magni, distinctio, porro quo ut qui praesentium sequi voluptatibus? Unde neque excepturi possimus consectetur repellendus ipsam illum ad, quidem eligendi, debitis ex inventore, magnam maiores officia illo dolor deleniti?</div>
       </template>
     </image-text-layout>
   </div>

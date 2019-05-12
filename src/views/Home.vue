@@ -15,7 +15,15 @@
         </slide>
       </carousel>
       <template slot="text">
-        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil magnam mollitia voluptatibus ab harum, adipisci incidunt eaque, enim obcaecati beatae itaque. Distinctio nobis delectus laborum, libero atque ipsum autem inventore consequuntur doloribus aliquam repudiandae unde similique excepturi! Quia id excepturi, accusantium quas voluptatibus voluptate adipisci vero. Consectetur qui error quaerat.</div>
+        <h1 class="u-text-neptune-title u-margin-bottom-earth">Chuck's Bar</h1>
+        <div
+          class="u-margin-bottom-uranus"
+        >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque accusamus deserunt ducimus. In eius aliquid reprehenderit, nulla omnis pariatur quas voluptatem at aut assumenda nobis nihil porro doloribus. Qui quia error quam dolores praesentium quae vel velit alias possimus! Ipsum.</div>
+        <a href="/location" class="u-button-primary u-text-venus-title u-decoration-none">Find us</a>
+        <a
+          href="/cocktails"
+          class="u-button-secondary u-text-venus-title u-decoration-none u-margin-left-venus"
+        >Menu</a>
       </template>
     </image-text-layout>
   </div>

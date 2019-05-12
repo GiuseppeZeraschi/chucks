@@ -4,7 +4,7 @@
     <image-text-layout class="v-contact__content">
       <contact-form></contact-form>
       <template slot="text">
-        <div class="v-contact__box u-text-venus-alt">
+        <div class="v-contact__box u-text-venus">
           <a
             @mouseover="phone.isHovered = true"
             @mouseleave="phone.isHovered = false"
@@ -149,6 +149,14 @@ export default {
     display: inline-flex;
     padding: $mercury;
     text-decoration: none;
+
+    &:not(:last-child) {
+      margin-bottom: $neptune;
+
+      @include lg {
+        margin-bottom: $earth;
+      }
+    }
 
     &-icon {
       color: $gold;

@@ -17,7 +17,7 @@
       <div class="v-contact-form__input-wrapper">
         <label
           :class="firstNameLabelClasses"
-          class="v-contact-form__label u-text-mars-title"
+          class="v-contact-form__label u-text-mars-title-alt"
           for="firstName"
         >
           First Name
@@ -37,7 +37,7 @@
       <div class="v-contact-form__input-wrapper">
         <label
           :class="lastNameLabelClasses"
-          class="v-contact-form__label u-text-mars-title"
+          class="v-contact-form__label u-text-mars-title-alt"
           for="lastName"
         >
           Last Name
@@ -59,7 +59,7 @@
       <div class="v-contact-form__input-wrapper">
         <label
           :class="phoneLabelClasses"
-          class="v-contact-form__label u-text-mars-title"
+          class="v-contact-form__label u-text-mars-title-alt"
           for="phone"
         >
           Phone
@@ -79,7 +79,7 @@
       <div class="v-contact-form__input-wrapper">
         <label
           :class="emailLabelClasses"
-          class="v-contact-form__label u-text-mars-title"
+          class="v-contact-form__label u-text-mars-title-alt"
           for="email"
         >
           Email
@@ -100,7 +100,7 @@
     <div class="v-contact-form__input-wrapper">
       <label
         :class="messageLabelClasses"
-        class="v-contact-form__label u-text-mars-title"
+        class="v-contact-form__label u-text-mars-title-alt"
         for="message"
       >
         Message
@@ -239,11 +239,7 @@ export default {
 
   &__input-group {
     display: flex;
-    flex-direction: column;
-
-    @include lg {
-      flex-direction: row;
-    }
+    flex-direction: row;
   }
 
   &__input-wrapper {
@@ -275,7 +271,7 @@ export default {
     }
 
     &--textarea {
-      height: 150px;
+      height: 100px;
     }
   }
 

@@ -119,6 +119,7 @@ export default {
 
 <style lang="scss">
 #app {
+  font-size: 18px;
   min-height: 100vh;
   overflow: hidden;
   // padding-bottom accounts for footer height
@@ -131,7 +132,7 @@ export default {
 }
 
 .v-section {
-  padding: $saturn $neptune;
+  padding: $jupiter $neptune;
 
   @include lg {
     padding: $jupiter $saturn;

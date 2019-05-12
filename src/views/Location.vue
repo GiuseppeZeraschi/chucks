@@ -8,7 +8,7 @@
         frameborder="0"
       ></iframe>
       <template slot="text">
-        <div>"We’re the perfect place for those who are running early and just aren’t quite ready to call lunch or dinner quits yet. Just a generally great place to hang out and unwind."</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eveniet quod, commodi officiis expedita laudantium, nihil saepe quasi pariatur magnam modi ipsa porro. Inventore, eveniet nisi. Voluptates quis temporibus minima odit! Rem totam inventore molestias sit labore quae aspernatur ab soluta cupiditate! Alias, magni iure illo natus cupiditate ex corporis.</div>
       </template>
     </image-text-layout>
   </div>
