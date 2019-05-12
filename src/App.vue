@@ -119,7 +119,6 @@ export default {
 
 <style lang="scss">
 #app {
-  font-size: 18px;
   min-height: 100vh;
   overflow: hidden;
   // padding-bottom accounts for footer height

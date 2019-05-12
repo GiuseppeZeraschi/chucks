@@ -2,7 +2,7 @@
   <div class="v-modal">
     <div class="u-text-venus">{{ message }}</div>
     <router-link :to="link">
-      <button class="u-text-venus-title u-button-primary">{{ buttonText }}</button>
+      <button class="u-text-venus-title u-button u-button-primary">{{ buttonText }}</button>
     </router-link>
   </div>
 </template>

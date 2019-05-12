@@ -19,10 +19,13 @@
         <div
           class="u-margin-bottom-uranus"
         >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque accusamus deserunt ducimus. In eius aliquid reprehenderit, nulla omnis pariatur quas voluptatem at aut assumenda nobis nihil porro doloribus. Qui quia error quam dolores praesentium quae vel velit alias possimus! Ipsum.</div>
-        <a href="/location" class="u-button-primary u-text-venus-title u-decoration-none">Find us</a>
+        <a
+          href="/location"
+          class="u-button u-button-primary u-text-venus-title u-decoration-none"
+        >Find us</a>
         <a
           href="/cocktails"
-          class="u-button-secondary u-text-venus-title u-decoration-none u-margin-left-venus"
+          class="u-button u-button-secondary u-text-venus-title u-decoration-none u-margin-left-venus"
         >Menu</a>
       </template>
     </image-text-layout>

@@ -120,7 +120,7 @@
     <input
       type="submit"
       value="Send"
-      class="v-contact-form__submit u-button-primary u-text-venus-title"
+      class="v-contact-form__submit u-button u-button-primary u-text-venus-title"
     >
   </form>
 </template>
@@ -271,7 +271,7 @@ export default {
     }
 
     &--textarea {
-      height: 100px;
+      height: 95px;
     }
   }
 

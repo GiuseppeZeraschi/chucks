@@ -110,34 +110,32 @@
 
 // BUTTONS
 
-.u-button-primary {
-    background-color: $gold;
+.u-button {
     border: none;
     border-radius: $mercury;
     box-shadow: 0 $moon $pluto 0 rgba(0, 0, 0, 0.4);
     color: $white;
+    font-weight: 400;
     height: $neptune;
     padding: $mars $earth;
     transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
 
-    &:hover {
-        background-color: $gold-light;
-        box-shadow: none;
-    }
-}
+    &-primary {
+        background-color: $gold;
 
-.u-button-secondary {
-    background-color: $black;
-    border: none;
-    border-radius: $mercury;
-    box-shadow: 0 $moon $pluto 0 rgba(0, 0, 0, 0.4);
-    color: $white;
-    height: $neptune;
-    padding: $mars $earth;
-    transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
-
-    &:hover {
-        background-color: $charcoal;
-        box-shadow: none;
+        &:hover {
+            background-color: $gold-light;
+            box-shadow: none;
+        }
     }
+
+    &-secondary {
+        background-color: $black;
+        
+        &:hover {
+            background-color: $charcoal;
+            box-shadow: none;
+        }
+    }
+
 }
