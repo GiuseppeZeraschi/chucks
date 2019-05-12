@@ -239,6 +239,11 @@ export default {
 
   &__input-group {
     display: flex;
+    flex-direction: column;
+
+    @include lg {
+      flex-direction: row;
+    }
   }
 
   &__input-wrapper {
@@ -270,7 +275,7 @@ export default {
     }
 
     &--textarea {
-      height: 100px;
+      height: 150px;
     }
   }
 

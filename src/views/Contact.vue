@@ -1,85 +1,87 @@
 <template>
   <div class="v-contact v-section">
     <div class="u-margin-bottom-saturn"></div>
-    <div class="v-contact__content">
-      <div class="v-contact__box u-text-venus-alt">
-        <a
-          @mouseover="phone.isHovered = true"
-          @mouseleave="phone.isHovered = false"
-          class="v-contact__link"
-          target="_blank"
-          :href="phone.href"
-        >
-          <i
-            :class="[ phone.iconClass, { 'v-contact__link-icon--hovered': phone.isHovered }]"
-            class="v-contact__link-icon"
-          ></i>
-          <div
-            :class="{ 'v-contact__link-detail--hovered': phone.isHovered }"
-            class="v-contact__link-detail"
-          >{{ isDesktop ? phone.info : phone.shorthand }}</div>
-        </a>
-        <a
-          @mouseover="email.isHovered = true"
-          @mouseleave="email.isHovered = false"
-          class="v-contact__link"
-          target="_blank"
-          :href="email.href"
-        >
-          <i
-            :class="[ email.iconClass, { 'v-contact__link-icon--hovered': email.isHovered }]"
-            class="v-contact__link-icon"
-          ></i>
-          <div
-            :class="{ 'v-contact__link-detail--hovered': email.isHovered }"
-            class="v-contact__link-detail"
-          >{{ isDesktop ? email.info : email.shorthand }}</div>
-        </a>
-        <a
-          @mouseover="instagram.isHovered = true"
-          @mouseleave="instagram.isHovered = false"
-          class="v-contact__link"
-          target="_blank"
-          :href="instagram.href"
-        >
-          <i
-            :class="[ instagram.iconClass, { 'v-contact__link-icon--hovered': instagram.isHovered }]"
-            class="v-contact__link-icon"
-          ></i>
-          <div
-            :class="{ 'v-contact__link-detail--hovered': instagram.isHovered }"
-            class="v-contact__link-detail"
-          >{{ isDesktop ? instagram.info : instagram.shorthand }}</div>
-        </a>
-        <a
-          @mouseover="facebook.isHovered = true"
-          @mouseleave="facebook.isHovered = false"
-          class="v-contact__link"
-          target="_blank"
-          :href="facebook.href"
-        >
-          <i
-            :class="[ facebook.iconClass, { 'v-contact__link-icon--hovered': facebook.isHovered }]"
-            class="v-contact__link-icon"
-          ></i>
-          <div
-            :class="{ 'v-contact__link-detail--hovered': facebook.isHovered }"
-            class="v-contact__link-detail"
-          >{{ isDesktop ? facebook.info : facebook.shorthand }}</div>
-        </a>
-      </div>
-      <div class="v-contact__divider-mobile"></div>
+    <image-text-layout class="v-contact__content">
       <contact-form></contact-form>
-    </div>
+      <template slot="text">
+        <div class="v-contact__box u-text-venus-alt">
+          <a
+            @mouseover="phone.isHovered = true"
+            @mouseleave="phone.isHovered = false"
+            class="v-contact__link"
+            target="_blank"
+            :href="phone.href"
+          >
+            <i
+              :class="[ phone.iconClass, { 'v-contact__link-icon--hovered': phone.isHovered }]"
+              class="v-contact__link-icon"
+            ></i>
+            <div
+              :class="{ 'v-contact__link-detail--hovered': phone.isHovered }"
+              class="v-contact__link-detail"
+            >{{ isDesktop ? phone.info : phone.shorthand }}</div>
+          </a>
+          <a
+            @mouseover="email.isHovered = true"
+            @mouseleave="email.isHovered = false"
+            class="v-contact__link"
+            target="_blank"
+            :href="email.href"
+          >
+            <i
+              :class="[ email.iconClass, { 'v-contact__link-icon--hovered': email.isHovered }]"
+              class="v-contact__link-icon"
+            ></i>
+            <div
+              :class="{ 'v-contact__link-detail--hovered': email.isHovered }"
+              class="v-contact__link-detail"
+            >{{ isDesktop ? email.info : email.shorthand }}</div>
+          </a>
+          <a
+            @mouseover="instagram.isHovered = true"
+            @mouseleave="instagram.isHovered = false"
+            class="v-contact__link"
+            target="_blank"
+            :href="instagram.href"
+          >
+            <i
+              :class="[ instagram.iconClass, { 'v-contact__link-icon--hovered': instagram.isHovered }]"
+              class="v-contact__link-icon"
+            ></i>
+            <div
+              :class="{ 'v-contact__link-detail--hovered': instagram.isHovered }"
+              class="v-contact__link-detail"
+            >{{ isDesktop ? instagram.info : instagram.shorthand }}</div>
+          </a>
+          <a
+            @mouseover="facebook.isHovered = true"
+            @mouseleave="facebook.isHovered = false"
+            class="v-contact__link"
+            target="_blank"
+            :href="facebook.href"
+          >
+            <i
+              :class="[ facebook.iconClass, { 'v-contact__link-icon--hovered': facebook.isHovered }]"
+              class="v-contact__link-icon"
+            ></i>
+            <div
+              :class="{ 'v-contact__link-detail--hovered': facebook.isHovered }"
+              class="v-contact__link-detail"
+            >{{ isDesktop ? facebook.info : facebook.shorthand }}</div>
+          </a>
+        </div>
+      </template>
+    </image-text-layout>
   </div>
 </template>
 
 <script>
+import ImageTextLayout from "@/components/ImageTextLayout";
 import ContactForm from "@/components/ContactForm";
 import { mapState } from "vuex";
 
 export default {
-  components: { ContactForm },
+  components: { ContactForm, ImageTextLayout },
   data() {
     return {
       phone: {
@@ -123,15 +125,10 @@ export default {
 <style lang="scss">
 .v-contact {
   &__content {
-    align-items: center;
-    color: $charcoal;
-    display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     @include lg {
-      align-items: flex-start;
-      flex-direction: row-reverse;
-      justify-content: center;
+      flex-direction: initial;
     }
   }
 
@@ -139,14 +136,10 @@ export default {
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 300px;
-    justify-content: space-between;
-    padding: $venus;
+    margin-top: $venus;
 
     @include lg {
       align-items: flex-start;
-      height: 265px;
-      margin-left: $jupiter;
     }
   }
 

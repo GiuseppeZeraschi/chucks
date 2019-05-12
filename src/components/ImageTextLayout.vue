@@ -1,17 +1,29 @@
 <template>
   <div class="v-image-text-layout__content">
-    <slot/>
-    <div class="v-image-text-layout__divider-mobile"></div>
+    <div class="v-image-text-layout__image-wrapper">
+      <slot/>
+    </div>
+    <div v-if="dividerMobile" class="v-image-text-layout__divider-mobile"></div>
     <div class="v-image-text-layout__text-wrapper">
       <slot name="text"/>
-      <div class="v-image-text-layout__divider-desk"></div>
+      <div v-if="dividerDesk" class="v-image-text-layout__divider-desk"></div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ImageTextLayout"
+  name: "ImageTextLayout",
+  props: {
+    dividerMobile: {
+      type: Boolean,
+      default: true
+    },
+    dividerDesk: {
+      type: Boolean,
+      default: true
+    }
+  }
 };
 </script>
 
@@ -23,13 +35,19 @@ export default {
     display: flex;
     flex-direction: column;
     font-weight: 300;
-    font-style: italic;
 
     @include lg {
       align-items: flex-start;
       flex-direction: row;
       justify-content: center;
     }
+  }
+
+  &__image-wrapper {
+    height: 100%;
+    max-height: 400px;
+    max-width: 400px;
+    width: 100%;
   }
 
   &__divider-mobile {
@@ -44,14 +62,15 @@ export default {
   }
 
   &__text-wrapper {
-    max-width: 400px;
+    height: 100%;
     max-height: 400px;
+    max-width: 400px;
+    width: 100%;
     text-align: center;
 
     @include lg {
       margin-left: $uranus;
       text-align: start;
-      width: 240px;
     }
   }
 
