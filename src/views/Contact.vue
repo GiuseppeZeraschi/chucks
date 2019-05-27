@@ -92,10 +92,10 @@ export default {
         isHovered: false
       },
       email: {
-        info: "management@chuckscocktailbar.com",
+        info: "chaplgroup@outlook.com",
         shorthand: "Email",
         iconClass: "fas fa-envelope",
-        href: "mailto:management@chuckscocktailbar.com",
+        href: "mailto:chaplgroup@outlook.com",
         isHovered: false
       },
       instagram: {
