@@ -8,7 +8,7 @@
 }
 
 .u-text-mars-alt {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 300;
     letter-spacing: $moon;
 }
@@ -42,6 +42,12 @@
     font-size: $venus;
     letter-spacing: $moon;
     text-transform: uppercase;
+}
+
+.u-text-venus-title-alt {
+    font-size: $venus;
+    font-weight: 400;
+    letter-spacing: $pluto;
 }
 
 .u-text-earth-title {
@@ -123,6 +129,7 @@
     color: $white;
     font-weight: 400;
     height: $neptune;
+    line-height: 0;
     padding: $mars $earth;
     transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
 
@@ -139,7 +146,7 @@
         background-color: $black;
         
         &:hover {
-            background-color: $charcoal;
+            background-color: $charcoal-light;
             box-shadow: none;
         }
     }

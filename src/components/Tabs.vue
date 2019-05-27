@@ -2,17 +2,16 @@
   <div class="v-tabs">
     <div class="v-tabs__input-group">
       <div v-for="(item, index) in menu" :key="index">
-        <label :for="item.tabName">
-          {{ item.tabName }}
-          <input
-            class="v-tabs__input"
-            type="radio"
-            name="menu"
-            :value="item.tabName"
-            :id="item.tabName"
-            v-model="subMenu"
-          >
-        </label>
+        <input
+          class="v-tabs__input"
+          type="radio"
+          name="menu"
+          :value="item.tabName"
+          :id="item.tabName"
+          v-model="subMenu"
+        >
+        <label class="v-tabs__label u-text-venus-title-alt" :for="item.tabName">{{ item.tabName }}</label>
+        <div class="v-tabs__input--underline"></div>
       </div>
     </div>
     <div v-for="(item, index) in menu" :key="index">
@@ -50,18 +49,61 @@ export default {
 .v-tabs {
   &__input-group {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: $earth;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .v-tabs__label {
+      color: $gold-light;
+    }
+
+    &:hover + .v-tabs__label {
+      color: $charcoal-light;
+    }
+
+    &:checked ~ .v-tabs__input--underline {
+      opacity: 1;
+    }
+
+    &--underline {
+      background-color: $gold;
+      height: $mercury;
+      margin-top: $mars;
+      opacity: 0;
+      transition: $transition-opacity;
+      width: 100%;
+      z-index: 1000;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    transition: $transition-color;
   }
 
   &__menu-item {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
 
     &--name {
+      flex: 0.3;
       font-weight: 700;
+      text-align: left;
     }
 
     &--ingredients {
+      flex: 0.6;
       font-style: italic;
+      text-align: left;
+    }
+
+    &--price {
+      flex: 0.1;
+      text-align: right;
     }
   }
 }

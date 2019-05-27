@@ -45,7 +45,7 @@ export default {
     transition: $transition-color;
 
     &:hover {
-      color: rgba(50, 46, 47, 0.6);
+      color: $charcoal-light;
     }
 
     &:hover .v-navbar-links__link--underline {

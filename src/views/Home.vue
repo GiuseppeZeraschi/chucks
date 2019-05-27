@@ -18,7 +18,7 @@
         <h1 class="u-text-neptune-title u-margin-bottom-earth">Chuck's</h1>
         <div
           class="u-margin-bottom-uranus"
-        >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque accusamus deserunt ducimus. In eius aliquid reprehenderit, nulla omnis pariatur quas voluptatem at aut assumenda nobis nihil porro doloribus. Qui quia error quam dolores praesentium quae vel velit alias possimus! Ipsum.</div>
+        >An intimate cocktail bar in Darlinghurst. Serving classics and creative house cocktails. Jazz, motown, blues, funk, RnB, and, hip hop in a candlelit pre-industrial building. Exposed brick, black steel, hand carved marble. All the popcorn you can eat.</div>
         <router-link to="/location">
           <button class="u-button u-button-primary u-text-venus-title u-decoration-none">Find us</button>
         </router-link>

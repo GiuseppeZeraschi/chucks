@@ -1,7 +1,7 @@
 <template>
   <div class="v-cocktails v-section">
     <div class="u-margin-bottom-saturn"></div>
-    <image-text-layout>
+    <image-text-layout :divider-desk="false">
       <carousel
         autoplay
         :autoplay-timeout="4000"
@@ -105,28 +105,7 @@ export default {
           visible: true
         },
         {
-          tabName: "Specials",
-          drinks: [
-            {
-              name: "Gin & Juice",
-              ingredients: "Bombay Sapphire Gin, Fresh Apple Juice",
-              price: 12
-            },
-            {
-              name: "Jack & Juice",
-              ingredients: "Jack Daniels, Fresh Apple Juice",
-              price: 12
-            },
-            {
-              name: "Vodka & Juice",
-              ingredients: "Ketel One Vodka, Fresh Apple Juice",
-              price: 12
-            }
-          ],
-          visible: false
-        },
-        {
-          tabName: "Classic's Revisited",
+          tabName: "Classics Revisited",
           drinks: [
             {
               name: "Aviation",
@@ -156,6 +135,27 @@ export default {
               ingredients:
                 "Botanist Gin, Cocchi Americano, Lillet, Orange Bitters",
               price: 20
+            }
+          ],
+          visible: false
+        },
+        {
+          tabName: "Specials",
+          drinks: [
+            {
+              name: "Gin & Juice",
+              ingredients: "Bombay Sapphire Gin, Fresh Apple Juice",
+              price: 12
+            },
+            {
+              name: "Jack & Juice",
+              ingredients: "Jack Daniels, Fresh Apple Juice",
+              price: 12
+            },
+            {
+              name: "Vodka & Juice",
+              ingredients: "Ketel One Vodka, Fresh Apple Juice",
+              price: 12
             }
           ],
           visible: false

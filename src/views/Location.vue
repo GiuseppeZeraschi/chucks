@@ -8,7 +8,8 @@
         frameborder="0"
       ></iframe>
       <template slot="text">
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eveniet quod, commodi officiis expedita laudantium, nihil saepe quasi pariatur magnam modi ipsa porro. Inventore, eveniet nisi. Voluptates quis temporibus minima odit! Rem totam inventore molestias sit labore quae aspernatur ab soluta cupiditate! Alias, magni iure illo natus cupiditate ex corporis.</div>
+        <div class="u-margin-bottom-earth">119 Riley Street, Darlinghurst 2010</div>
+        <div>Nestled away just off the bustling junction of Stanley Street and Riley Street in Darlinghurst (next to Verde). Inconspicuously located, impressively placed.</div>
       </template>
     </image-text-layout>
   </div>
