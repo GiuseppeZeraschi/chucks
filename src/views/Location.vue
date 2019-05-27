@@ -8,7 +8,7 @@
         frameborder="0"
       ></iframe>
       <template slot="text">
-        <div class="u-margin-bottom-earth">119 Riley Street, Darlinghurst 2010</div>
+        <div class="u-margin-bottom-earth u-bold">119 Riley Street, Darlinghurst 2010</div>
         <div>Nestled away just off the bustling junction of Stanley Street and Riley Street in Darlinghurst (next to Verde). Inconspicuously located, impressively placed.</div>
       </template>
     </image-text-layout>

@@ -4,7 +4,17 @@
     <image-text-layout>
       <img class="v-about__owners-image" src="@/assets/owners.jpeg" alt="Chuck's owners">
       <template slot="text">
-        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis obcaecati reiciendis doloremque dicta laborum facilis tempora, aspernatur libero minima laudantium aut magni, distinctio, porro quo ut qui praesentium sequi voluptatibus? Unde neque excepturi possimus consectetur repellendus ipsam illum ad, quidem eligendi, debitis ex inventore, magnam maiores officia illo dolor deleniti?</div>
+        <div
+          class="u-margin-bottom-mars"
+        >Chuck's, your friendly neighbourhood cocktail bar. Serving up some old forgotten classics, great cognac cocktails and kickass signatures. We are an intimate, funky space where the relaxed mood and friendly service will take you out of your busy week.</div>
+        <div class="u-margin-bottom-mars">
+          Playing some fine old tunes from blues, jazz, funk, and Motown to hip hop and rap, we are a space for everyone.
+          Our small food menu, consisting of fine cheeses and cured meats is available every day and night.
+        </div>
+        <div>
+          If you’re looking for something a bit bigger, we also work with our neighbourhood eateries to provide additional options.
+          We’re the perfect place for those who are running early, aren’t quite ready to call lunch or dinner quits yet or just want a general place to hang out and unwind.
+        </div>
       </template>
     </image-text-layout>
   </div>

@@ -15,10 +15,13 @@
         </slide>
       </carousel>
       <template slot="text">
-        <h1 class="u-text-neptune-title u-margin-bottom-earth">Chuck's</h1>
+        <h1 class="v-home__title u-text-neptune-title u-margin-bottom-earth">Chuck's</h1>
         <div
-          class="u-margin-bottom-uranus"
-        >An intimate cocktail bar in Darlinghurst. Serving classics and creative house cocktails. Jazz, motown, blues, funk, RnB, and, hip hop in a candlelit pre-industrial building. Exposed brick, black steel, hand carved marble. All the popcorn you can eat.</div>
+          class="u-margin-bottom-mars"
+        >An intimate cocktail bar in Darlinghurst. Serving classics and creative house cocktails.</div>
+        <div
+          class="u-margin-bottom-saturn"
+        >Jazz, motown, blues, funk, RnB and hip hop in a candlelit pre-industrial building. Exposed brick, black steel, hand carved marble. All the popcorn you can eat.</div>
         <router-link to="/location">
           <button class="u-button u-button-primary u-text-venus-title u-decoration-none">Find us</button>
         </router-link>
@@ -87,5 +90,11 @@ export default {
 
 .VueCarousel-dot {
   margin-top: 0 !important;
+}
+
+.v-home {
+  &__title {
+    color: $charcoal;
+  }
 }
 </style>

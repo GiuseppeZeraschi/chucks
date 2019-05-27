@@ -30,7 +30,7 @@ export default {
 <style lang="scss">
 .v-modal {
   align-items: center;
-  background-color: $charcoal;
+  background-color: $charcoal-light;
   border-radius: $mercury;
   box-shadow: $box-shadow;
   color: $white;

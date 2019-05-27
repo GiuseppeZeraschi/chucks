@@ -136,10 +136,10 @@ export default {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: $venus;
 
     @include lg {
       align-items: flex-start;
+      margin-top: $venus;
     }
   }
 
@@ -151,7 +151,7 @@ export default {
     text-decoration: none;
 
     &:not(:last-child) {
-      margin-bottom: $neptune;
+      margin-bottom: $uranus;
 
       @include lg {
         margin-bottom: $earth;

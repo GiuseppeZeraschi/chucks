@@ -50,7 +50,7 @@ export default {
   &__input-group {
     display: flex;
     justify-content: space-between;
-    margin-bottom: $earth;
+    margin-bottom: $uranus;
   }
 
   &__input {
