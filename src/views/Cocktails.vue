@@ -105,7 +105,7 @@ export default {
           visible: true
         },
         {
-          tabName: "Classics Revisited",
+          tabName: "Classics",
           drinks: [
             {
               name: "Aviation",

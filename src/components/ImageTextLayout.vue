@@ -63,13 +63,13 @@ export default {
 
   &__text-wrapper {
     height: 100%;
-    max-height: 400px;
-    max-width: 400px;
     width: 100%;
     text-align: center;
 
     @include lg {
       margin-left: $uranus;
+      max-height: 400px;
+      max-width: 400px;
       text-align: start;
     }
   }

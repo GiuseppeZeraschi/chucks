@@ -36,9 +36,10 @@ export default {
 <style lang="scss">
 .v-mobile-nav {
   background-color: $white;
-  height: 100vh;
+  height: 100%;
   // margin-bottom accounts for footer height
   margin-bottom: -$footer-height;
+  overflow-y: scroll;
   position: absolute;
   width: 100%;
   z-index: 100;
