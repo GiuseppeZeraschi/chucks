@@ -15,7 +15,7 @@
         </slide>
       </carousel>
       <template slot="text">
-        <h1 class="u-text-neptune-title u-margin-bottom-earth">Chuck's Bar</h1>
+        <h1 class="u-text-neptune-title u-margin-bottom-earth">Chuck's</h1>
         <div
           class="u-margin-bottom-uranus"
         >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque accusamus deserunt ducimus. In eius aliquid reprehenderit, nulla omnis pariatur quas voluptatem at aut assumenda nobis nihil porro doloribus. Qui quia error quam dolores praesentium quae vel velit alias possimus! Ipsum.</div>
@@ -38,6 +38,7 @@ import { Carousel, Slide } from "vue-carousel";
 import image1 from "@/assets/interior-1.jpg";
 import image2 from "@/assets/interior-2.jpg";
 import image3 from "@/assets/interior-3.jpg";
+import image4 from "@/assets/interior-4.jpg";
 
 export default {
   name: "home",
@@ -60,6 +61,10 @@ export default {
         {
           src: image3,
           alt: "Chuck's image 3"
+        },
+        {
+          src: image4,
+          alt: "Chuck's image 4"
         }
       ]
     };
