@@ -2,9 +2,9 @@
   <div id="app">
     <nav class="v-navbar" :class="navClasses">
       <div class="v-navbar__wrapper">
-        <span class="v-navbar__hamburger" @click.prevent="displayMobileNav = !displayMobileNav">
+        <div class="v-navbar__hamburger" @click="displayMobileNav = !displayMobileNav">
           <hamburger :mobile-nav-active="displayMobileNav"></hamburger>
-        </span>
+        </div>
         <logo></logo>
         <navbar-links :router-links="routerLinks"></navbar-links>
         <social-links :social-links="socialLinks"></social-links>

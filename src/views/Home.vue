@@ -22,14 +22,14 @@
         <div
           class="u-margin-bottom-uranus"
         >Jazz, motown, blues, funk, RnB and hip hop in a candlelit pre-industrial building. Exposed brick, black steel, hand carved marble. All the popcorn you can eat.</div>
-        <router-link to="/location">
-          <button class="u-button u-button-primary u-text-venus-title u-decoration-none">Find us</button>
+        <div class="u-flex"><router-link to="/contact">
+        <button class="u-button u-button-primary u-uppercase u-decoration-none">Book function</button>
         </router-link>
         <router-link to="/cocktails">
-          <button
-            class="u-button u-button-secondary u-text-venus-title u-decoration-none u-margin-left-venus"
-          >Menu</button>
-        </router-link>
+        <button
+        class="u-button u-button-secondary u-text-venus-title u-decoration-none u-margin-left-venus"
+        >Menu</button>
+        </router-link></div>
       </template>
     </image-text-layout>
   </div>
